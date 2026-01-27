@@ -198,5 +198,24 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    function openModal(modalId) {
+        document.getElementById(modalId).style.display = "block";
+        document.body.style.overflow = "hidden"; // Bloque le scroll arrière
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).style.display = "none";
+        document.body.style.overflow = "auto"; // Libère le scroll
+    }
+
+    // Ferme la modale si l'utilisateur clique n'importe où en dehors de la boîte
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    }
+    </script>
 </body>
 </html>
