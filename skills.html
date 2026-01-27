@@ -253,5 +253,35 @@
         }
     }
     </script>
+    <script>
+        const carousel = document.querySelector('.carousel-container');
+            // --- 1. SCROLL À LA MOLETTE ---
+            carousel.addEventListener('wheel', (evt) => {
+                evt.preventDefault();
+                carousel.scrollLeft += evt.deltaY; // Transforme le scroll vertical en horizontal
+            });
+
+            // --- 2. DÉFILEMENT AUTOMATIQUE ---
+            let autoScroll = setInterval(() => {
+                // Si on arrive au bout, on repart au début
+                if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
+                    carousel.scrollLeft = 0;
+                } else {
+                    carousel.scrollLeft += 1; // Vitesse du défilement
+                }
+            }, 20); // Fluidité (plus le chiffre est bas, plus c'est rapide)
+
+            // --- 3. PAUSE AU SURVOL ---
+            carousel.addEventListener('mouseenter', () => clearInterval(autoScroll));
+            carousel.addEventListener('mouseleave', () => {
+                autoScroll = setInterval(() => {
+                    if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
+                        carousel.scrollLeft = 0;
+                    } else {
+                        carousel.scrollLeft += 1;
+                    }
+                }, 20);
+            });
+    </script>
 </body>
 </html>
