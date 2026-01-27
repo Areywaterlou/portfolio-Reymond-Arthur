@@ -176,65 +176,75 @@ section {
 .project-content h3 { color: #00fff0; margin-bottom: 10px; }
 
 /* ======= MODALES (UNIFIÉES) ======= */
+/* ======= MODALES (UNIFIÉES ET CENTRÉES) ======= */
 .modal {
-    display: none; /* JS change ceci en 'flex' */
+    display: none; /* À changer en flex par JS */
     position: fixed;
-    z-index: 10000;
-    left: 0;
     top: 0;
-    width: 100vw;  /* Toute la largeur */
-    height: 100vh; /* Toute la hauteur */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
+    z-index: 10000;
     
-    /* Le secret du centrage parfait */
+    /* Centrage Forcé */
+    display: none; /* Remets flex ici pour tester le visuel sans cliquer */
     justify-content: center;
     align-items: center;
-    padding: 20px;
 }
 
 .modal-content {
     background: #0a0a0a;
     padding: 30px;
     border: 2px solid #00fff0;
-    max-width: 700px;
-    width: 100%;
+    border-radius: 20px;
     
-    max-height: 85vh; 
+    width: 90%;
+    max-width: 700px;
+    max-height: 85vh;
+    
     overflow-y: auto;
     
-    border-radius: 20px;
     position: relative;
-    white-space: normal;
-    
     margin: 0 !important; 
     
     box-shadow: 0 0 50px rgba(0, 255, 240, 0.3);
-    animation: modalFadeIn 0.3s ease-out;
+    animation: modalFadeIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @keyframes modalFadeIn {
-    from { opacity: 0; transform: scale(0.9); }
+    from { opacity: 0; transform: scale(0.7); }
     to { opacity: 1; transform: scale(1); }
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: #00fff0;
+    border-radius: 10px;
 }
 
 .modal-content img {
     display: block;
     width: 50%;
-    max-height: 250px;
+    max-height: 200px; /* Un peu plus petit pour garantir de voir la bordure bas */
     object-fit: contain;
     margin: 0 auto 20px auto;
     border-radius: 10px;
+    border: 1px solid rgba(0, 255, 240, 0.2);
 }
 
 .close {
-    position: absolute; /* Fixé en haut à droite de la modale */
+    position: absolute;
     right: 20px;
     top: 15px;
     color: #00fff0;
     font-size: 35px;
+    font-weight: bold;
     cursor: pointer;
-    z-index: 10001;
+    line-height: 1;
 }
 /* ======= CONTACT ======= */
 .contact-container {
