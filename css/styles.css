@@ -38,12 +38,17 @@ body {
     width: 100%;
     background: rgba(10, 10, 10, 0.95);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Centre le contenu principal */
+    align-items: center; 
     padding: 12px 40px;
     z-index: 1000;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
     backdrop-filter: blur(8px);
+}
+
+.nav-brand {
+    position: absolute; 
+    left: 40px;
 }
 
 .nav-brand a {
@@ -54,11 +59,13 @@ body {
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 25px;
+    /* Plus besoin de flex: 2 ici */
 }
 
+/* On supprime le .navigation::after qui n'est plus utile avec cette méthode */
 .nav-links a {
     text-decoration: none;
     color: #e0e0e0;
