@@ -67,66 +67,133 @@
                 </div>
             </div>
 
-        <!-- Section Projets -->
-        <section class="section">
-            <h2>Projets</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/image/journal.jpg" alt="SAE1.02 - Comparaison d'approches algorithmiques">
+       <section class="section">
+            <h2 class="section-title">Mes Projets</h2>
+            
+            <div class="carousel-container">
+                <div class="projects-carousel">
+                    <div class="project-card" onclick="openModal('modal1')">
+                        <div class="project-image">
+                            <img src="assets/image/journal.jpg" alt="Algorithmes">
+                        </div>
+                        <div class="project-content">
+                            <h3>S1.02 : Algorithmes</h3>
+                            <p>Optimisation et tri de dépêches.</p>
+                            <span class="view-more">En savoir plus +</span>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3>S1.02 : Comparaison d'approches algorithmiques</h3>
-                        <p>Cette SAE avait pour but de créer des algorithmes de tri de dépêches grâce à des lexiques faits à la main, puis générés automatiquement selon 5 catégories, tout en optimisant le code en diminuant les ressources nécessaires.</p>
+
+                    <div class="project-card" onclick="openModal('modal2')">
+                        <div class="project-image">
+                            <img src="assets/image/ordinateur.jpg" alt="Site Web">
+                        </div>
+                        <div class="project-content">
+                            <h3>S1.056 : Site Web</h3>
+                            <p>Création pour Econocom.</p>
+                            <span class="view-more">En savoir plus +</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/image/ordinateur.jpg" alt="SAE1.056 - Création d’un site web pour une entreprise du numérique.">
+
+                    <div class="project-card" onclick="openModal('modal3')">
+                        <div class="project-image">
+                            <img src="assets/image/base_de_donnee.jpg" alt="Base de données">
+                        </div>
+                        <div class="project-content">
+                            <h3>S2.04 : Base de données</h3>
+                            <p>Analyse d'accidents (R & SQL).</p>
+                            <span class="view-more">En savoir plus +</span>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3>S1.056 : Création d’un site web pour une entreprise du numérique.</h3>
-                        <p>Le but de cette SAE était de créer un site web pour une entreprise du numérique. Nous avions choisi ECONOCOM et devions réaliser un site web pour attirer des stagiaires de troisième, avec formulaires et pages explicatives sur l'entreprise.</p>
+
+                    <div class="project-card" onclick="openModal('modal4')">
+                        <div class="project-image">
+                            <img src="assets/image/livre.png.jpeg" alt="Portfolio">
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio</h3>
+                            <p>Développement Web & Design.</p>
+                            <span class="view-more">En savoir plus +</span>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/image/base_de_donnee.jpg" alt="Projet 3">
+
+                    <div class="project-card" onclick="openModal('modal5')">
+                        <div class="project-image">
+                            <img src="assets/image/carte_faerun.webp" alt="Faërun">
+                        </div>
+                        <div class="project-content">
+                            <h3>Projet Faërun</h3>
+                            <p>Jeu au tour par tour en Java.</p>
+                            <span class="view-more">En savoir plus +</span>
+                        </div>
                     </div>
-                    <div class="project-content">
-                        <h3>SAE2.04 : Tri d'une base de données</h3>
-                        <p>Nous avons trié, nettoyé et organisé des données sur les accidents de la route en région PACA, puis réalisé un compte rendu illustré avec des graphiques via R.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/image/livre.png.jpeg" alt="Portfolio">
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio</h3>
-                        <p>Création de ce portfolio avec HTML5, CSS3 et un peu de JavaScript pour découvrir les bases et lier tous mes projets ensemble.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/image/carte_faerun.webp" alt="Carte de Faërun">
-                    </div>
-                    <div class="project-content">
-                        <h3>Projet Faërun</h3>
-                        <p>Jeu au tour par tour codé en Java, comprenant Elfes et Nains, permettant de comprendre classes, objets et relations entre eux.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/image/master_ball.png" alt="Master Ball">
-                    </div>
-                    <div class="project-content">
-                        <h3>Méga SAE</h3>
-                        <p>Application lourde pour organisateur d'événements, mettant en pratique gestion de projet, IHM, Graphes et travail d'équipe.</p>
+
+                    <div class="project-card" onclick="openModal('modal6')">
+                        <div class="project-image">
+                            <img src="assets/image/master_ball.png" alt="Méga SAE">
+                        </div>
+                        <div class="project-content">
+                            <h3>Méga SAE</h3>
+                            <p>Application de gestion d'événements.</p>
+                            <span class="view-more">En savoir plus +</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <img src="assets/image/journal.jpg" alt="Projet 1">
+                <h3>S1.02 : Comparaison d'approches algorithmiques</h3>
+                <p>Cette SAE avait pour but de créer des algorithmes de tri de dépêches grâce à des lexiques faits à la main, puis générés automatiquement selon 5 catégories, tout en optimisant le code en diminuant les ressources nécessaires.</p>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <img src="assets/image/ordinateur.jpg" alt="Projet 2">
+                <h3>S1.056 : Création d’un site web</h3>
+                <p>Le but de cette SAE était de créer un site web pour une entreprise du numérique. Nous avions choisi ECONOCOM et devions réaliser un site web pour attirer des stagiaires de troisième.</p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <img src="assets/image/base_de_donnee.jpg" alt="Projet 3">
+                <h3>SAE2.04 : Tri d'une base de données</h3>
+                <p>Tri, nettoyage et organisation des données sur les accidents de la route en région PACA. Réalisation d'un compte rendu illustré avec graphiques via R.</p>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <img src="assets/image/livre.png.jpeg" alt="Portfolio">
+                <h3>Portfolio Personnel</h3>
+                <p>Création de ce portfolio interactif avec HTML5, CSS3 et JavaScript pour centraliser mes compétences et projets.</p>
+            </div>
+        </div>
+
+        <div id="modal5" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal5')">&times;</span>
+                <img src="assets/image/carte_faerun.webp" alt="Faërun">
+                <h3>Projet Faërun</h3>
+                <p>Jeu au tour par tour développé en Java. Gestion des classes d'objets (Elfes, Nains) et logique de combat.</p>
+            </div>
+        </div>
+
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal6')">&times;</span>
+                <img src="assets/image/master_ball.png" alt="Méga SAE">
+                <h3>Méga SAE : Gestion d'événements</h3>
+                <p>Application lourde destinée aux organisateurs d'événements. Mise en pratique de l'IHM, des Graphes et des méthodes agiles.</p>
+            </div>
+        </div>
 
     </main>
 

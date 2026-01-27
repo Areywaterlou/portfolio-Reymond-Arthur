@@ -38,8 +38,8 @@ body {
     width: 100%;
     background: rgba(10, 10, 10, 0.95);
     display: flex;
-    justify-content: center; /* Centre le contenu principal */
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     padding: 12px 40px;
     z-index: 1000;
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
@@ -47,7 +47,7 @@ body {
 }
 
 .nav-brand {
-    position: absolute; 
+    position: absolute;
     left: 40px;
 }
 
@@ -62,10 +62,8 @@ body {
     display: flex;
     list-style: none;
     gap: 25px;
-    /* Plus besoin de flex: 2 ici */
 }
 
-/* On supprime le .navigation::after qui n'est plus utile avec cette méthode */
 .nav-links a {
     text-decoration: none;
     color: #e0e0e0;
@@ -264,7 +262,7 @@ section {
 /* ======= SKILLS LARGE DESIGN ======= */
 .skills-grid-large {
     display: grid;
-    grid-template-columns: 1fr; /* Une seule colonne large par défaut */
+    grid-template-columns: 1fr;
     gap: 40px;
     max-width: 900px;
     margin: 0 auto;
@@ -345,34 +343,50 @@ section {
     color: #000;
 }
 
-/* Version Tablette/PC : on peut mettre en 2 colonnes si tu veux encore plus grand */
 @media (min-width: 1024px) {
     .skills-grid-large {
-        grid-template-columns: 1fr; /* Garder 1 colonne pour l'aspect imposant, ou 1fr 1fr pour gagner de la place */
+        grid-template-columns: 1fr;
         max-width: 1000px;
     }
 }
 
-/* ======= PROJETS ======= */
-.projects-grid {
+/* ======= CARROUSEL ======= */
+.carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+    padding: 30px 10px;
+    scrollbar-width: thin;
+    scrollbar-color: #00fff0 #111;
+}
+
+.carousel-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carousel-container::-webkit-scrollbar-thumb {
+    background: #00fff0;
+    border-radius: 10px;
+}
+
+.projects-carousel {
     display: flex;
-    flex-wrap: wrap;
     gap: 30px;
-    justify-content: center;
-    padding: 20px;
+    width: max-content;
+    padding: 10px;
 }
 
 .project-card {
-    flex: 1 1 calc(33% - 30px); /* 3 cartes max par ligne, gap pris en compte */
-    max-width: 320px;           /* limite la taille pour ne pas dépasser */
+    flex: 0 0 320px;
     background: #111111;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
     border: 2px solid #00fff0;
-    transition: transform 0.2s, box-shadow 0.3s;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
 }
 
 .project-card:hover {
@@ -400,9 +414,71 @@ section {
 .project-content p {
     color: #e0e0e0;
     font-size: 0.95rem;
-    height: auto; /* plus de texte tronqué */
 }
 
+/* ======= MODALES ======= */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: #0c0c0c;
+    margin: 5% auto;
+    padding: 40px;
+    border: 2px solid #00fff0;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 20px;
+    position: relative;
+    color: #e0e0e0;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    color: #00fff0;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.modal-content img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(0, 255, 240, 0.3);
+}
+
+.modal-content h3 {
+    color: #00fff0;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+/* ======= PROJETS GRID ======= */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
 
 /* ======= CONTACT ======= */
 .contact-container {
@@ -416,7 +492,7 @@ section {
     padding: 20px;
 }
 
-/* ===== Contact Info ===== */
+/* Contact Info */
 .contact-info {
     flex: 1 1 45%;
     min-width: 300px;
@@ -444,7 +520,7 @@ section {
 }
 
 .contact-item i {
-    font-size: 2.2rem; /* plus gros icônes */
+    font-size: 2.2rem;
     min-width: 40px;
     text-align: center;
     color: #00fff0;
@@ -479,7 +555,7 @@ section {
     transform: scale(1.2);
 }
 
-/* ===== Contact Form ===== */
+/* Contact Form */
 .contact-form {
     flex: 1 1 45%;
     min-width: 300px;
