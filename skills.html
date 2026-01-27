@@ -3,73 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compétences - Arthur Reymond</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <nav class="navigation">
-        <ul class="liens-navigation">
+        <ul class="nav-links">
             <li><a href="index.html">À propos de moi</a></li>
-            <li><a href="skills.html" class="actif">Compétences</a></li>
+            <li><a href="skills.html" class="active">Compétences</a></li>
             <li><a href="contact.html">Me contacter</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section id="competences">
-            <h1 class="titre-section">Mes Compétences</h1>
-            <div class="grille-competences">
-                <div class="categorie-competence">
-                    <h3>Technique</h3>
-                    <ul>
-                        <li><i class="material-icons">code</i> Java / HTML / CSS</li>
-                        <li><i class="material-icons">storage</i> SQL / R</li>
-                    </ul>
+    <main class="portfolio">
+
+        <!-- Section Compétences -->
+        <h1 class="section-title">Mes Compétences</h1>
+        <div class="skills-sections">
+            <section class="skills-section">
+                <h2>Compétences Techniques</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programmation</h3>
+                        <ul>
+                            <li><i class="material-icons">code</i> Java</li>
+                            <li><i class="material-icons">code</i> HTML5</li>
+                            <li><i class="material-icons">code</i> CSS3</li>
+                            <li><i class="material-icons">code</i> R</li>
+                            <li><i class="material-icons">code</i> IHM</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Bases de données</h3>
+                        <ul>
+                            <li><i class="material-icons">storage</i> SQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Modélisation</h3>
+                        <ul>
+                            <li><i class="material-icons">description</i> UML</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="categorie-competence">
-                    <h3>Langues</h3>
-                    <ul>
-                        <li><i class="material-icons">language</i> Anglais (B2)</li>
-                        <li><i class="material-icons">language</i> Espagnol (A2)</li>
-                    </ul>
+            </section>
+
+            <section class="skills-section">
+                <h2>Compétences Générales</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Langues</h3>
+                        <ul>
+                            <li><i class="material-icons">language</i> Français - Langue maternelle</li>
+                            <li><i class="material-icons">language</i> Anglais - Niveau B2</li>
+                            <li><i class="material-icons">language</i> Espagnol - Niveau A2</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Gestion de Projet</h3>
+                        <ul>
+                            <li><i class="material-icons">groups</i> Travail d'équipe</li>
+                            <li><i class="material-icons">schedule</i> Gestion du temps</li>
+                            <li><i class="material-icons">assignment</i> Méthodes agiles</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Autres Compétences</h3>
+                        <ul>
+                            <li><i class="material-icons">description</i> Rédaction technique</li>
+                            <li><i class="material-icons">chat</i> Communication</li>
+                            <li><i class="material-icons">lightbulb</i> Résolution de problèmes</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="categorie-competence">
-                    <h3>Gestion de Projet</h3>
-                    <ul>
-                        <li><i class="material-icons">groups</i> Travail d'équipe</li>
-                        <li><i class="material-icons">lightbulb</i> Résolution de problèmes</li>
-                    </ul>
+            </section>
+        </div>
+
+        <!-- Section Projets -->
+        <section class="section">
+            <h2>Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/image/journal.jpg" alt="SAE1.02 - Comparaison d'approches algorithmiques">
+                    </div>
+                    <div class="project-content">
+                        <h3>S1.02 : Comparaison d'approches algorithmiques</h3>
+                        <p>Cette SAE avait pour but de créer des algorithmes de tri de dépêches grâce à des lexiques faits à la main, puis générés automatiquement selon 5 catégories, tout en optimisant le code en diminuant les ressources nécessaires.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/image/ordinateur.jpg" alt="SAE1.056 - Création d’un site web pour une entreprise du numérique.">
+                    </div>
+                    <div class="project-content">
+                        <h3>S1.056 : Création d’un site web pour une entreprise du numérique.</h3>
+                        <p>Le but de cette SAE était de créer un site web pour une entreprise du numérique. Nous avions choisi ECONOCOM et devions réaliser un site web pour attirer des stagiaires de troisième, avec formulaires et pages explicatives sur l'entreprise.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/image/base_de_donnee.jpg" alt="Projet 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>SAE2.04 : Tri d'une base de données</h3>
+                        <p>Nous avons trié, nettoyé et organisé des données sur les accidents de la route en région PACA, puis réalisé un compte rendu illustré avec des graphiques via R.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/image/livre.png.jpeg" alt="Portfolio">
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio</h3>
+                        <p>Création de ce portfolio avec HTML5, CSS3 et un peu de JavaScript pour découvrir les bases et lier tous mes projets ensemble.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/image/carte_faerun.webp" alt="Carte de Faërun">
+                    </div>
+                    <div class="project-content">
+                        <h3>Projet Faërun</h3>
+                        <p>Jeu au tour par tour codé en Java, comprenant Elfes et Nains, permettant de comprendre classes, objets et relations entre eux.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/image/master_ball.png" alt="Master Ball">
+                    </div>
+                    <div class="project-content">
+                        <h3>Méga SAE</h3>
+                        <p>Application lourde pour organisateur d'événements, mettant en pratique gestion de projet, IHM, Graphes et travail d'équipe.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="projets">
-            <h2 class="titre-section">Mes Projets</h2>
-            <div class="grille-projets">
-                <div class="carte-projet">
-                    <img src="assets/image/journal.jpg" alt="Projet">
-                    <div class="projet-contenu">
-                        <h3>S1.02 : Algorithmes</h3>
-                        <p>Tri de dépêches avec lexiques optimisés.</p>
-                    </div>
-                </div>
-                <div class="carte-projet">
-                    <img src="assets/image/ordinateur.jpg" alt="Projet">
-                    <div class="projet-contenu">
-                        <h3>S1.056 : Site Web</h3>
-                        <p>Création d'un site pour Econocom.</p>
-                    </div>
-                </div>
-                <div class="carte-projet">
-                    <img src="assets/image/carte_faerun.webp" alt="Projet">
-                    <div class="projet-contenu">
-                        <h3>Projet Faërun</h3>
-                        <p>Jeu au tour par tour codé en Java.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
