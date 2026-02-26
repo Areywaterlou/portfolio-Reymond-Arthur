@@ -305,8 +305,127 @@ section {
 .submit-btn:hover {
     box-shadow: 0 0 20px var(--neon-glow);
 }
+/* --- COMPLÉMENT ACCUEIL --- */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-/* RESPONSIVE */
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-logo {
+    width: 150px;
+    filter: drop-shadow(0 0 15px var(--accent-color));
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+}
+
+.hero-text h1 span {
+    color: var(--accent-color);
+    text-shadow: 0 0 20px var(--neon-glow);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.badge {
+    background: var(--accent-color);
+    color: #000;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* --- COMPLÉMENT CARTE PROFIL --- */
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    display: flex;
+    max-width: 900px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.profile-img-container {
+    flex: 1;
+    max-width: 300px;
+}
+
+.profile-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 2;
+    padding: 40px;
+    text-align: left;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.profile-bio {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    font-style: italic;
+}
+
+/* --- TIMELINE --- */
+.timeline {
+    border-left: 2px solid var(--accent-color);
+    margin-left: 20px;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -41px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: var(--bg-dark);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+.timeline-content .date {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* --- MOBILE --- */
+@media (max-width: 768px) {
+    .profile-card { flex-direction: column; }
+    .profile-img-container { max-width: 100%; height: 250px; }
+    .hero-text h1 { font-size: 2rem; }
+}
 @media (max-width: 768px) {
     .contact-container { flex-direction: column; }
     .skill-main-card { flex-direction: column; text-align: center; }
