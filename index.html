@@ -2,13 +2,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/icons/flaviconAR.png">
     <title>Arthur Reymond | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <nav class="navigation">
         <ul class="nav-links">
             <li><a href="index.html" class="active">À propos</a></li>
@@ -17,50 +16,42 @@
         </ul>
     </nav>
 
-    <section id="presentation">
-        <h2 class="section-title">Présentation</h2>
-        <div class="about-wrapper">
-            <div class="about-column-img">
-                <div class="profile-frame">
-                    <img src="assets/image/portrait.jpeg" alt="Arthur Reymond">
-                </div>
+    <div class="presentation-container">
+        <div class="image-side">
+            <img src="assets/image/portrait.jpeg" alt="Arthur Reymond" class="profile-img">
+            
+            <div class="social-links">
+                <a href="https://github.com/Areywaterlou" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
+        </div>
 
-            <div class="about-column-text">
-                <h3>Arthur Reymond</h3>
-                <p class="bio-intro">
-                    Étudiant en <strong>BUT Informatique</strong> (2ème année) à l'IUT2 de Grenoble. Passionné par le développement d'applications et les défis algorithmiques.
-                </p>
-                
-                <div class="details-grid-compact">
-                    <div class="detail-card">
-                        <i class="fas fa-university" style="color: var(--accent-color);"></i>
-                        <div><strong>IUT2 Grenoble</strong><br>Formation</div>
-                    </div>
-                    <div class="detail-card">
-                        <i class="fas fa-code" style="color: var(--accent-color);"></i>
-                        <div><strong>Java & Web</strong><br>Spécialité</div>
-                    </div>
-                    <div class="detail-card">
-                        <i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i>
-                        <div><strong>Isère, FR</strong><br>Localisation</div>
-                    </div>
-                    <div class="detail-card">
-                        <i class="fas fa-calendar-check" style="color: var(--accent-color);"></i>
-                        <div><strong>Sept. 2025</strong><br>Dispo Alternance</div>
-                    </div>
+        <div class="bio-content">
+            <h1>Arthur Reymond</h1>
+            <p style="color: var(--text-gray); font-size: 1.1rem;">
+                Étudiant en <strong>BUT Informatique</strong> (2ème année) à l'IUT2 de Grenoble. Passionné par le développement d'applications et les défis algorithmiques.
+            </p>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <i class="fas fa-university"></i>
+                    <div><strong>IUT2 Grenoble</strong><br>Formation</div>
                 </div>
-
-                <div class="passions">
-                    <h4 style="margin-bottom: 15px;">Centres d'intérêt</h4>
-                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                        <span style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--glass-border);">F1</span>
-                        <span style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--glass-border);">Gaming</span>
-                        <span style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--glass-border);">Hardware</span>
-                    </div>
+                <div class="detail-item">
+                    <i class="fas fa-code"></i>
+                    <div><strong>Java & Web</strong><br>Spécialité</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div><strong>Isère, FR</strong><br>Localisation</div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <div><strong>Sept. 2025</strong><br>Dispo Alternance</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
 </body>
 </html>
