@@ -7,9 +7,7 @@
     <title>Arthur Reymond | Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <nav class="navigation">
         <ul class="nav-links">
@@ -19,102 +17,54 @@
         </ul>
     </nav>
 
-    <section id="accueil">
-        <div class="hero-container">
-            <div class="profile-main">
-                <div class="hero-logo-wrapper">
-                    <img src="assets/icons/flaviconAR.png" alt="Logo AR" class="hero-logo">
-                </div>
-                <div class="hero-text">
-                    <h1>ARTHUR <span>REYMOND</span></h1>
-                    <div class="subtitle-group">
-                        <p class="subtitle"><i class="fas fa-code"></i> Développeur Informatique</p>
-                        <span class="badge">BUT 2 - IUT2 GRENOBLE</span>
-                    </div>
-                </div>
-                <a href="#presentation" class="scroll-indicator">
-                    <i class="fas fa-chevron-down"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <section id="presentation">
-        <h2 class="section-title">À propos</h2>
+        <h2 class="section-title">Présentation</h2>
         <div class="about-wrapper">
             <div class="about-column-img">
                 <div class="profile-frame">
-                    <img src="assets/image/portrait.jpeg" alt="Arthur Reymond Portrait">
+                    <img src="assets/image/portrait.jpeg" alt="Arthur Reymond">
                 </div>
-                <div class="mini-socials">
-                    <a href="https://github.com/Areywaterlou" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <div style="margin-top: 25px; display: flex; gap: 20px;">
+                    <a href="https://github.com/Areywaterlou" target="_blank" style="color: var(--accent-color); font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank" style="color: var(--accent-color); font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
 
             <div class="about-column-text">
-                <h3>Futur alternant en informatique</h3>
+                <h3>Arthur Reymond</h3>
                 <p class="bio-intro">
-                    Étudiant rigoureux à l'IUT2 de Grenoble, je m'épanouis dans la conception d'architectures logicielles propres et d'expériences web fluides. Ma curiosité me pousse à explorer constamment de nouvelles technos.
+                    Étudiant en <strong>BUT Informatique</strong> (2ème année) à l'IUT2 de Grenoble. Passionné par le développement d'applications et les défis algorithmiques.
                 </p>
                 
                 <div class="details-grid-compact">
                     <div class="detail-card">
-                        <i class="fas fa-university"></i>
-                        <span><strong>Formation</strong><br>BUT Info G3</span>
+                        <i class="fas fa-university" style="color: var(--accent-color);"></i>
+                        <div><strong>IUT2 Grenoble</strong><br>Formation</div>
                     </div>
                     <div class="detail-card">
-                        <i class="fas fa-laptop-code"></i>
-                        <span><strong>Spécialité</strong><br>Java & Web</span>
+                        <i class="fas fa-code" style="color: var(--accent-color);"></i>
+                        <div><strong>Java & Web</strong><br>Spécialité</div>
                     </div>
                     <div class="detail-card">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span><strong>Localisation</strong><br>Grenoble / Isère</span>
+                        <i class="fas fa-map-marker-alt" style="color: var(--accent-color);"></i>
+                        <div><strong>Isère, FR</strong><br>Localisation</div>
                     </div>
                     <div class="detail-card">
-                        <i class="fas fa-flag"></i>
-                        <span><strong>Dispo</strong><br>Septembre 2025</span>
+                        <i class="fas fa-calendar-check" style="color: var(--accent-color);"></i>
+                        <div><strong>Sept. 2025</strong><br>Dispo Alternance</div>
                     </div>
                 </div>
 
                 <div class="passions">
-                    <h4>Centres d'intérêt</h4>
-                    <div class="passion-badges">
-                        <span class="p-badge"><i class="fas fa-flag-checkered"></i> F1</span>
-                        <span class="p-badge"><i class="fas fa-gamepad"></i> Gaming</span>
-                        <span class="p-badge"><i class="fas fa-tv"></i> Animation</span>
+                    <h4 style="margin-bottom: 15px;">Centres d'intérêt</h4>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <span style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--glass-border);">F1</span>
+                        <span style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--glass-border);">Gaming</span>
+                        <span style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--glass-border);">Hardware</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section id="parcours">
-        <h2 class="section-title">Parcours</h2>
-        <div class="timeline">
-            <div class="timeline-item left">
-                <div class="timeline-content">
-                    <span class="date">2024 - AUJOURD'HUI</span>
-                    <h3>BUT Informatique</h3>
-                    <p class="location">IUT2 Grenoble</p>
-                    <p>Développement Java, C++, SQL et gestion de base de données.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item right">
-                <div class="timeline-content">
-                    <span class="date">2021 - 2024</span>
-                    <h3>Baccalauréat Général</h3>
-                    <p class="location">Lycée La Saulaie</p>
-                    <p>Spé. Maths / Physique. Mention Assez Bien.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-simple">
-        <p>&copy; 2025 Arthur Reymond. Portfolio réalisé en BUT Informatique.</p>
-    </footer>
-
 </body>
 </html>
