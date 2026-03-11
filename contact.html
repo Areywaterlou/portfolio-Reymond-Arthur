@@ -4,54 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/icons/flaviconAR.png">
-    <title>Contact - Arthur Reymond</title>
+    <title>Contact | Arthur Reymond</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navigation">
         <ul class="nav-links">
-            <li><a href="index.html">A propos de moi</a></li>
+            <li><a href="index.html">À propos</a></li>
             <li><a href="skills.html">Compétences</a></li>
-            <li><a href="contact.html" class="active">Me contacter</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
     <main class="portfolio">
         <section class="section contact">
-            <h2 class="section-title">Me contacter</h2>
-            <p class="contact-subtitle">N'hésitez pas à me solliciter pour un entretien ou des informations complémentaires.</p>
+            <header class="contact-header">
+                <h2 class="section-title">Me contacter</h2>
+                <p class="contact-subtitle">
+                    Que ce soit pour une opportunité de <strong>stage</strong>, d'<strong>alternance</strong> ou simplement pour échanger sur un projet, n'hésitez pas à me joindre.
+                </p>
+            </header>
             
             <div class="contact-grid">
                 <a href="mailto:arthur.reymond@etu.univ-grenoble-alpes.fr" class="contact-box">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email</h3>
+                    <div class="box-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email professionnel</h3>
                     <p>arthur.reymond@etu.univ-grenoble-alpes.fr</p>
+                    <span class="contact-action">Envoyer un message</span>
                 </a>
                 
                 <div class="contact-box">
-                    <i class="fas fa-phone"></i>
+                    <div class="box-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
                     <h3>Téléphone</h3>
                     <p>+33 7 82 20 97 01</p>
+                    <span class="contact-action">Disponible en semaine</span>
                 </div>
                 
                 <div class="contact-box">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Localisation</h3>
-                    <p>38160, Chatte, France</p>
+                    <div class="box-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Zone d'activité</h3>
+                    <p>Isère (38) - Saint-Marcellin & Grenoble</p>
+                    <span class="contact-action">Mobilité régionale</span>
                 </div>
             </div>
 
             <div class="social-wrapper">
-                <h3>Retrouvez-moi sur</h3>
+                <div class="social-header">
+                    <span class="line"></span>
+                    <h3>Présence numérique</h3>
+                    <span class="line"></span>
+                </div>
                 <div class="social-icons">
-                    <a href="https://github.com/Areywaterlou" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/the_sama_tutur/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/Areywaterlou" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/the_sama_tutur/" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
+
+            <footer class="contact-footer">
+                <p>Réponse garantie sous 24h à 48h.</p>
+            </footer>
         </section>
     </main>
+
+    <script>
+        const cards = document.querySelectorAll('.contact-box');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--x', `${x}px`);
+                card.style.setProperty('--y', `${y}px`);
+            });
+        });
+    </script>
 </body>
 </html>
