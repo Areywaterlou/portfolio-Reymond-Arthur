@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Évite que la nav cache les titres lors du clic */
 }
 
 body {
@@ -41,7 +42,7 @@ body {
     align-items: center;
     padding: 12px 40px;
     z-index: 1000;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
     backdrop-filter: blur(8px);
 }
 
@@ -120,9 +121,12 @@ section {
 .skill-list-complex { display: flex; flex-wrap: wrap; gap: 15px; }
 
 .skill-list-complex .item {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 8px 18px; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #00fff0; transition: 0.3s;
+    background: rgba(0, 255, 240, 0.05);
+    padding: 8px 18px; 
+    border-radius: 20px; 
+    border: 1px solid rgba(0, 255, 240, 0.3);
+    color: #00fff0; 
+    transition: 0.3s;
 }
 
 .skill-list-complex .item:hover { background: #00fff0; color: #000; }
@@ -135,12 +139,10 @@ section {
     overflow-x: auto;
     white-space: nowrap;
     padding: 30px 10px;
-    scrollbar-width: thin;
-    scrollbar-color: #00fff0 #111;
+    scrollbar-width: none; /* Cache la scrollbar sur Firefox */
 }
 
-.carousel-container::-webkit-scrollbar { height: 8px; }
-.carousel-container::-webkit-scrollbar-thumb { background: #00fff0; border-radius: 10px; }
+.carousel-container::-webkit-scrollbar { display: none; } /* Cache sur Chrome/Safari */
 
 .projects-carousel {
     display: flex;
@@ -175,7 +177,7 @@ section {
 .project-content { padding: 20px; }
 .project-content h3 { color: #00fff0; margin-bottom: 10px; }
 
-/* ======= MODALES (UNIFIÉES) ======= */
+/* ======= MODALES ======= */
 .modal {
     display: none; 
     position: fixed;
@@ -197,61 +199,22 @@ section {
     max-width: 650px;
     max-height: 85vh;
     overflow-y: auto;
-    
-    /* LE FIX : Centrage absolu mathématique */
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     box-shadow: 0 0 50px rgba(0, 255, 240, 0.3);
-    white-space: normal;
 }
 
 .modal-content img {
     display: block;
     width: auto;
     max-width: 100%;
-    max-height: 200px;
-    margin: 10px auto 20px auto;
+    max-height: 250px;
+    margin: 0 auto 20px auto;
     border-radius: 10px;
-    border: 1px solid rgba(0, 255, 240, 0.3);
-}
-.modal-footer {
-    margin-top: 25px;
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0, 255, 240, 0.2);
 }
 
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: transparent;
-    color: #00fff0;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 1px solid #00fff0;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-}
-
-.project-link i {
-    font-size: 18px;
-}
-
-.project-link:hover {
-    background: rgba(0, 255, 240, 0.1);
-    box-shadow: 0 0 15px rgba(0, 255, 240, 0.4);
-    transform: translateY(-2px);
-}
-
-/* On s'assure que le bouton close est bien placé */
 .close {
     position: absolute;
     right: 20px;
@@ -259,8 +222,8 @@ section {
     color: #00fff0;
     font-size: 30px;
     cursor: pointer;
-    line-height: 1;
 }
+
 /* ======= CONTACT ======= */
 .contact-container {
     display: flex;
@@ -271,39 +234,41 @@ section {
     margin: 0 auto;
 }
 
-.contact-info, .contact-form {
+.contact-info {
     flex: 1 1 45%;
-    min-width: 300px;
     background: #111;
     border-radius: 20px;
     padding: 30px;
     border: 2px solid #00fff0;
+    text-align: left;
 }
 
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-top: 8px;
-    background: #1a1a1a;
-    border: 1px solid #00fff0;
-    color: #fff;
-    border-radius: 8px;
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.submit-btn {
-    margin-top: 15px;
-    background: #00fff0;
-    color: #000;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
+.contact-item i { color: #00fff0; font-size: 1.5rem; }
+
+.social-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
 }
+
+.social-link i {
+    font-size: 2rem;
+    color: #e0e0e0;
+    transition: 0.3s;
+}
+
+.social-link:hover i { color: #00fff0; }
 
 /* ======= RESPONSIVE ======= */
 @media (max-width: 768px) {
-    .contact-container { flex-direction: column; }
     .skill-main-card { flex-direction: column; text-align: center; }
     .skill-icon-box { margin: 0 0 20px 0; }
+    .nav-links { gap: 15px; font-size: 0.9rem; }
 }
