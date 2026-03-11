@@ -7,6 +7,7 @@
     <title>Compétences | Arthur Reymond</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,43 +21,37 @@
 
     <main class="portfolio">
         <section id="skills">
-            <h2 class="section-title">Expertise Technique</h2>
+            <h1 class="section-title">Mes Compétences</h1>
             
             <div class="skills-grid-large">
                 <div class="skill-main-card">
-                    <div class="skill-icon-box"><i class="fas fa-laptop-code"></i></div>
+                    <div class="skill-icon-box">
+                        <i class="material-icons">terminal</i>
+                    </div>
                     <div class="skill-info">
-                        <h3>Software Dev</h3>
+                        <h3>Software & Web</h3>
                         <div class="skill-list-complex">
                             <span class="item">Java</span>
-                            <span class="item">C / C++</span>
+                            <span class="item">JavaScript</span>
+                            <span class="item">PHP / Symfony</span>
+                            <span class="item">HTML5 / CSS3</span>
                             <span class="item">Python</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="skill-main-card">
-                    <div class="skill-icon-box"><i class="fas fa-globe"></i></div>
-                    <div class="skill-info">
-                        <h3>Web Stack</h3>
-                        <div class="skill-list-complex">
-                            <span class="item">Symfony</span>
-                            <span class="item">PHP</span>
-                            <span class="item">JavaScript</span>
-                            <span class="item">HTML / CSS</span>
-                        </div>
+                    <div class="skill-icon-box">
+                        <i class="material-icons">storage</i>
                     </div>
-                </div>
-
-                <div class="skill-main-card">
-                    <div class="skill-icon-box"><i class="fas fa-tools"></i></div>
                     <div class="skill-info">
                         <h3>Outils & Data</h3>
                         <div class="skill-list-complex">
-                            <span class="item">SQL</span>
+                            <span class="item">SQL / PostgreSQL</span>
                             <span class="item">Git / GitHub</span>
-                            <span class="item">Linux</span>
+                            <span class="item">Linux (Bash)</span>
                             <span class="item">Docker</span>
+                            <span class="item">Agilité (Scrum)</span>
                         </div>
                     </div>
                 </div>
@@ -70,34 +65,45 @@
                     
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=300&q=80" alt="Code">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=400&q=80" alt="Projet 1">
                         </div>
                         <div class="project-content">
                             <h3>Gestionnaire de Stocks</h3>
-                            <p>Application développée en Java avec interface Swing et base SQL.</p>
-                            <span class="view-more">Voir sur GitHub</span>
+                            <p>Application Java Swing avec gestion de base de données SQL.</p>
+                            <span class="view-more">Détails du projet</span>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=300&q=80" alt="Web">
+                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=400&q=80" alt="Projet 2">
                         </div>
                         <div class="project-content">
-                            <h3>E-commerce PHP</h3>
-                            <p>Site dynamique réalisé avec Symfony et une architecture MVC.</p>
-                            <span class="view-more">Voir sur GitHub</span>
+                            <h3>Plateforme E-commerce</h3>
+                            <p>Site dynamique complet développé sous le framework Symfony.</p>
+                            <span class="view-more">Détails du projet</span>
                         </div>
                     </div>
 
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=300&q=80" alt="Data">
+                            <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=400&q=80" alt="Projet 3">
                         </div>
                         <div class="project-content">
                             <h3>Analyse de Données</h3>
-                            <p>Script Python pour le traitement de statistiques en temps réel.</p>
-                            <span class="view-more">Voir sur GitHub</span>
+                            <p>Outil de statistiques automatisé conçu avec Python.</p>
+                            <span class="view-more">Détails du projet</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&w=400&q=80" alt="Projet 4">
+                        </div>
+                        <div class="project-content">
+                            <h3>Application Web Mobile</h3>
+                            <p>Interface responsive optimisée pour les supports tactiles.</p>
+                            <span class="view-more">Détails du projet</span>
                         </div>
                     </div>
 
@@ -105,5 +111,36 @@
             </div>
         </section>
     </main>
+
+    <script>
+        const carousel = document.querySelector('.carousel-container');
+        
+        // 1. Défilement à la molette (horizontal)
+        carousel.addEventListener('wheel', (evt) => {
+            evt.preventDefault();
+            carousel.scrollLeft += evt.deltaY;
+        });
+
+        // 2. Défilement automatique
+        let autoScroll = setInterval(() => {
+            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
+                carousel.scrollLeft = 0;
+            } else {
+                carousel.scrollLeft += 1;
+            }
+        }, 25);
+
+        // 3. Pause au survol de la souris
+        carousel.addEventListener('mouseenter', () => clearInterval(autoScroll));
+        carousel.addEventListener('mouseleave', () => {
+            autoScroll = setInterval(() => {
+                if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
+                    carousel.scrollLeft = 0;
+                } else {
+                    carousel.scrollLeft += 1;
+                }
+            }, 25);
+        });
+    </script>
 </body>
 </html>
