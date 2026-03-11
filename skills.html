@@ -39,6 +39,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="skill-main-card">
+                    <div class="skill-icon-box"><i class="material-icons">architecture</i></div>
+                    <div class="skill-info">
+                        <h3>Conception & Analyse</h3>
+                        <div class="skill-list-complex">
+                            <div class="item">BPMN</div><div class="item">UML</div><div class="item">Méthodes Agiles</div><div class="item">IHM / UX</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -48,26 +57,43 @@
                 <div class="projects-carousel">
                     <div class="project-card" onclick="openModal('modal1')">
                         <img src="assets/image/journal.jpg" alt="Algorithmes">
-                        <div class="project-content"><h3>S1.02 : Algorithmes</h3><p>Optimisation de dépêches.</p></div>
+                        <div class="project-content"><h3>S1.02 : Algorithmes</h3><p>Optimisation de dépêches.</p><span class="view-more">En savoir plus +</span></div>
+                    </div>
+                    <div class="project-card" onclick="openModal('modal2')">
+                        <img src="assets/image/ordinateur.jpg" alt="Site Web">
+                        <div class="project-content"><h3>S1.05 : Site Web</h3><p>Création pour Econocom.</p><span class="view-more">En savoir plus +</span></div>
+                    </div>
+                    <div class="project-card" onclick="openModal('modal3')">
+                        <img src="assets/image/base_de_donnee.jpg" alt="Base de données">
+                        <div class="project-content"><h3>S2.04 : Données</h3><p>Analyse d'accidents.</p><span class="view-more">En savoir plus +</span></div>
+                    </div>
+                    <div class="project-card" onclick="openModal('modal4')">
+                        <img src="assets/image/livre.png.jpeg" alt="Portfolio">
+                        <div class="project-content"><h3>Portfolio</h3><p>Design & Web.</p><span class="view-more">En savoir plus +</span></div>
+                    </div>
+                    <div class="project-card" onclick="openModal('modal5')">
+                        <img src="assets/image/carte_faerun.webp" alt="Faërun">
+                        <div class="project-content"><h3>Projet Faërun</h3><p>Jeu tour par tour (Java).</p><span class="view-more">En savoir plus +</span></div>
+                    </div>
+                    <div class="project-card" onclick="openModal('modal6')">
+                        <img src="assets/image/master_ball.png" alt="Méga SAE">
+                        <div class="project-content"><h3>Méga SAE</h3><p>Gestion d'événements.</p><span class="view-more">En savoir plus +</span></div>
                     </div>
                     <div class="project-card" onclick="openModal('modal7')">
                         <img src="assets/image/chronia.png" alt="Chronia">
-                        <div class="project-content"><h3>SAÉ S3 : Chronia</h3><p>Plateforme pour seniors.</p></div>
+                        <div class="project-content"><h3>SAÉ S3 : Chronia</h3><p>Plateforme seniors.</p><span class="view-more">En savoir plus +</span></div>
                     </div>
-                    </div>
+                </div>
             </div>
         </section>
 
-        <div id="modal7" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal7')">&times;</span>
-                <h3>SAÉ S3 : Chronia</h3>
-                <p>Plateforme web de maintien à domicile avec agenda collaboratif et chatbot intelligent.</p>
-                <div style="margin-top:20px; text-align:center;">
-                    <a href="https://chronia.duckdns.org/gitlab-profile/view/accueil_externe_view.php" target="_blank" class="project-link" style="color:#00fff0; text-decoration:none; border:1px solid #00fff0; padding:10px; border-radius:5px;">Voir l'application</a>
-                </div>
-            </div>
-        </div>
+        <div id="modal1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal1')">&times;</span><img src="assets/image/journal.jpg"><h3>S1.02 : Algorithmes</h3><p>Création d'algorithmes de tri de dépêches via lexiques optimisés pour réduire les ressources.</p></div></div>
+        <div id="modal2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal2')">&times;</span><img src="assets/image/ordinateur.jpg"><h3>S1.05 : Site Web</h3><p>Réalisation d'un site web pour ECONOCOM visant à attirer des stagiaires de troisième.</p></div></div>
+        <div id="modal3" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal3')">&times;</span><img src="assets/image/base_de_donnee.jpg"><h3>S2.04 : Données</h3><p>Nettoyage et analyse de données d'accidents PACA avec R et SQL.</p></div></div>
+        <div id="modal4" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal4')">&times;</span><img src="assets/image/livre.png.jpeg"><h3>Portfolio</h3><p>Création de ce portfolio interactif pour centraliser mon parcours.</p></div></div>
+        <div id="modal5" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal5')">&times;</span><img src="assets/image/carte_faerun.webp"><h3>Projet Faërun</h3><p>Développement Java d'un RPG tactique avec gestion d'inventaire et combats.</p></div></div>
+        <div id="modal6" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal6')">&times;</span><img src="assets/image/master_ball.png"><h3>Méga SAE</h3><p>Application lourde de gestion d'événements utilisant Graphes et IHM avancée.</p></div></div>
+        <div id="modal7" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal7')">&times;</span><img src="assets/image/chronia.png"><h3>SAÉ S3 : Chronia</h3><p>Plateforme de maintien à domicile avec agenda collaboratif et chatbot IA pour seniors.</p><div style="text-align:center;"><a href="https://chronia.duckdns.org" target="_blank" class="project-link"><i class="material-icons">launch</i> Voir l'application</a></div></div></div>
     </main>
 
     <script>
@@ -79,29 +105,19 @@
         document.getElementById(id).style.display = "none";
         document.body.style.overflow = "auto";
     }
-    window.onclick = function(event) {
-        if (event.target.className === 'modal') {
-            event.target.style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-    }
+    window.onclick = function(e) { if (e.target.className === 'modal') { e.target.style.display = "none"; document.body.style.overflow = "auto"; } }
 
-    // Script Carrousel Stabilisé
     const carousel = document.querySelector('.carousel-container');
     let isPaused = false;
-    
     setInterval(() => {
         if(!isPaused) {
-            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
-                carousel.scrollLeft = 0;
-            } else {
-                carousel.scrollLeft += 1;
-            }
+            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) carousel.scrollLeft = 0;
+            else carousel.scrollLeft += 1;
         }
     }, 30);
-
     carousel.addEventListener('mouseenter', () => isPaused = true);
     carousel.addEventListener('mouseleave', () => isPaused = false);
+    carousel.addEventListener('wheel', (e) => { e.preventDefault(); carousel.scrollLeft += e.deltaY; });
     </script>
 </body>
 </html>
