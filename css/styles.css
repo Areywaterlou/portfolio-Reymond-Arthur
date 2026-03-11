@@ -257,3 +257,162 @@ section {
     .timeline::after { left: 20px; }
     .timeline-item { width: 100%; padding-left: 50px; }
 }
+/* --- CARROUSEL DE PROJETS --- */
+.carousel-container {
+    width: 100%;
+    max-width: var(--content-width); /* Utilise la largeur resserrée pour ne pas faire vide */
+    overflow-x: auto;
+    padding: 20px 0 40px;
+    cursor: grab;
+    scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none; /* Cache la scrollbar sur Chrome/Safari */
+}
+
+.projects-carousel {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    padding: 10px;
+}
+
+.project-card {
+    flex: 0 0 300px; /* Taille fixe pour le défilement */
+    background: var(--bg-accent);
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+
+.project-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--accent-color);
+}
+
+.project-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.view-more {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    letter-spacing: 1px;
+}
+
+/* --- SYSTÈME DE MODALES --- */
+.modal {
+    display: none; /* Caché par défaut, géré par JS */
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    background: var(--bg-accent);
+    margin: 5% auto;
+    padding: 30px;
+    border: 1px solid var(--glass-border);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    animation: modalFadeIn 0.4s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color: var(--text-muted);
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: var(--accent-color);
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--glass-border);
+}
+
+.modal-content h3 {
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.modal-content p {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Style spécifique pour le lien dans la modale Chronia */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(0, 255, 240, 0.1);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    background: var(--accent-color);
+    color: var(--bg-dark);
+}
