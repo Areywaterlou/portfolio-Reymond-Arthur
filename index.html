@@ -2,56 +2,85 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Arthur Reymond | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/icons/flaviconAR.png">
+    <title>Portfolio - Arthur Reymond</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
 </head>
-<body>
 
+<body>
+    <!-- Navigation -->
     <nav class="navigation">
         <ul class="nav-links">
-            <li><a href="index.html" class="active">À propos</a></li>
-            <li><a href="skills.html">Compétences</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" class="active">A propos de moi</a></li>
+            <li><a href="skills.html" >Compétences </a></li>
+            <li><a href="contact.html">Me contacter</a></li>
+
         </ul>
     </nav>
-
-    <div class="presentation-container">
-        <div class="image-side">
-            <img src="assets/image/portrait.jpeg" alt="Arthur Reymond" class="profile-img">
-            
-            <div class="social-links">
-                <a href="https://github.com/Areywaterlou" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <!-- PARTIE 1 : ACCUEIL -->
+    <section id="accueil">
+        <div class="profile-container">
+            <div class="profile-left">
+                <img src="assets/icons/flaviconAR.png" alt="Arthur Reymond" class="profile-image">
+            </div>
+            <div class="name-container">
+                <h1><span>A</span><span>r</span><span>t</span><span>h</span><span>u</span><span>r</span></h1>
+                <h2><span>R</span><span>e</span><span>y</span><span>m</span><span>o</span><span>n</span><span>d</span></h2>
+                <p class="title">Étudiant en BUT informatique 2<sup>e</sup> année</p>
             </div>
         </div>
+    </section>
 
-        <div class="bio-content">
-            <h1>Arthur Reymond</h1>
-            <p style="color: var(--text-gray); font-size: 1.1rem;">
-                Étudiant en <strong>BUT Informatique</strong> (2ème année) à l'IUT2 de Grenoble. Passionné par le développement d'applications et les défis algorithmiques.
-            </p>
+    <!-- PARTIE 2 : PRÉSENTATION -->
+    <section id="presentation">
+        <h2 class="section-title">À propos de moi</h2>
+        <div class="profile-card">
+            <div class="profile-left">
+                <img src="assets/image/portrait.jpeg" alt="Photo de profil">
+            </div>
+            <div class="profile-right">
+                <h3>Arthur Reymond</h3>
+                <p><strong>Âge :</strong> 19 ans</p>
+                <p><strong>Spécialité :</strong> Programmation, Web, Java</p>
+                <p><strong>Passions :</strong> Jeux vidéos, lire, la F1, les animes</p>
+                <p><strong>Institut :</strong> IUT2 Grenoble</p>
+                <p>
+                    Je suis Arthur et je suis en deuxième année de BUT Informatique à l’IUT2. Depuis le début de mes études, je me passionne pour la programmation et le développement logiciel, et j’aime apprendre en pratiquant à travers des projets concrets, des challenges ou des expérimentations personnelles.
 
-            <div class="details-grid">
-                <div class="detail-item">
-                    <i class="fas fa-university"></i>
-                    <div><strong>IUT2 Grenoble</strong><br>Formation</div>
+Je m’intéresse aussi aux nouvelles technologies et à tout ce qui touche à l’informatique, et j’apprécie particulièrement travailler sur des projets qui ont une application réelle. Curieux et motivé, je cherche toujours à améliorer mes compétences et à découvrir de nouvelles manières de résoudre des problèmes. Pour moi, l’informatique est avant tout un moyen de créer, d’innover et de partager des idées avec d’autres passionnés.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARTIE 3 : PARCOURS -->
+    <section id="parcours">
+        <h2 class="section-title">Mon Parcours</h2>
+        <div class="timeline">
+            <!-- Plus récent -->
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2024 - Présent</div>
+                    <h3>BUT Informatique </h3>
+                    <p>IUT2 à Grenoble (Place Doyen Gosse)</p>
+                    <p>Programmation, bases de données, développement web, systèmes d'information</p>
                 </div>
-                <div class="detail-item">
-                    <i class="fas fa-code"></i>
-                    <div><strong>Java & Web</strong><br>Spécialité</div>
-                </div>
-                <div class="detail-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div><strong>Isère, FR</strong><br>Localisation</div>
-                </div>
-                <div class="detail-item">
-                    <i class="fas fa-calendar-check"></i>
-                    <div><strong>Sept. 2025</strong><br>Dispo Alternance</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-point"></div>
+                <div class="timeline-content">
+                    <div class="timeline-date">2021 - 2024</div>
+                    <h3>Bac Général - Mention Assez Bien</h3>
+                    <p>Lycée La Saulaie à Saint-Marcellin (Isère)</p>
+                    <p>Spécialités : Mathématiques, Physique-Chimie, Option Mathématiques Expertes</p>
                 </div>
             </div>
         </div>
-    </div>
-
+    </section>
 </body>
 </html>
