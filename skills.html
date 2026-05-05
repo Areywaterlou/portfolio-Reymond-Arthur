@@ -3,121 +3,270 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compétences et projets d'Arthur Reymond – Développeur web et logiciel.">
     <link rel="icon" type="image/png" href="assets/icons/flaviconAR.png">
-    <title>Compétences - Arthur Reymond</title>
+    <title>Compétences – Arthur Reymond</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navigation">
+
+    <nav class="navigation" aria-label="Navigation principale">
         <ul class="nav-links">
-            <li><a href="index.html">À propos de moi</a></li>
+            <li><a href="index.html">À propos</a></li>
             <li><a href="skills.html" class="active">Compétences</a></li>
-            <li><a href="contact.html">Me contacter</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <main class="portfolio">
-        <section>
-            <h1 class="section-title">Mes Compétences</h1>
+
+        <section aria-labelledby="title-competences">
+            <h1 class="section-title" id="title-competences">Mes Compétences</h1>
             <div class="skills-grid-large">
+
                 <div class="skill-main-card">
-                    <div class="skill-icon-box"><i class="material-icons">terminal</i></div>
+                    <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">terminal</i></div>
                     <div class="skill-info">
                         <h3>Développement Web & Logiciel</h3>
                         <div class="skill-list-complex">
-                            <div class="item">Java</div><div class="item">JavaScript</div><div class="item">PHP</div><div class="item">HTML5 / CSS3</div><div class="item">C / C++</div><div class="item">Symfony</div>
+                            <span class="item">Java</span>
+                            <span class="item">JavaScript</span>
+                            <span class="item">PHP</span>
+                            <span class="item">HTML5 / CSS3</span>
+                            <span class="item">C / C++</span>
+                            <span class="item">Symfony</span>
+                            <span class="item">JavaFX</span>
+                            <span class="item">Java Android</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="skill-main-card">
-                    <div class="skill-icon-box"><i class="material-icons">settings_ethernet</i></div>
+                    <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">settings_ethernet</i></div>
                     <div class="skill-info">
                         <h3>Systèmes & Données</h3>
                         <div class="skill-list-complex">
-                            <div class="item">Linux</div><div class="item">SQL / Oracle</div><div class="item">R (Data Science)</div>
+                            <span class="item">Linux</span>
+                            <span class="item">SQL / PostgreSQL</span>
+                            <span class="item">SQLite</span>
+                            <span class="item">R (Data Science)</span>
+                            <span class="item">Docker</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="skill-main-card">
-                    <div class="skill-icon-box"><i class="material-icons">architecture</i></div>
+                    <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">architecture</i></div>
                     <div class="skill-info">
                         <h3>Conception & Analyse</h3>
                         <div class="skill-list-complex">
-                            <div class="item">BPMN</div><div class="item">UML</div><div class="item">Méthodes Agiles</div><div class="item">IHM / UX</div>
+                            <span class="item">UML</span>
+                            <span class="item">BPMN</span>
+                            <span class="item">Méthodes Agiles</span>
+                            <span class="item">IHM / UX</span>
+                            <span class="item">Tests unitaires</span>
+                            <span class="item">DevOps</span>
                         </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <section class="section">
-            <h2 class="section-title">Mes Projets</h2>
-            <div class="carousel-container">
+        <section aria-labelledby="title-projets">
+            <h2 class="section-title" id="title-projets">Mes Projets</h2>
+            <div class="carousel-container" role="region" aria-label="Carrousel de projets">
                 <div class="projects-carousel">
-                    <div class="project-card" onclick="openModal('modal1')">
-                        <img src="assets/image/journal.jpg" alt="Algorithmes">
-                        <div class="project-content"><h3>S1.02 : Algorithmes</h3><p>Optimisation de dépêches.</p><span class="view-more">En savoir plus +</span></div>
-                    </div>
-                    <div class="project-card" onclick="openModal('modal2')">
-                        <img src="assets/image/ordinateur.jpg" alt="Site Web">
-                        <div class="project-content"><h3>S1.05 : Site Web</h3><p>Création pour Econocom.</p><span class="view-more">En savoir plus +</span></div>
-                    </div>
-                    <div class="project-card" onclick="openModal('modal3')">
-                        <img src="assets/image/base_de_donnee.jpg" alt="Base de données">
-                        <div class="project-content"><h3>S2.04 : Données</h3><p>Analyse d'accidents.</p><span class="view-more">En savoir plus +</span></div>
-                    </div>
-                    <div class="project-card" onclick="openModal('modal4')">
-                        <img src="assets/image/livre.png.jpeg" alt="Portfolio">
-                        <div class="project-content"><h3>Portfolio</h3><p>Design & Web.</p><span class="view-more">En savoir plus +</span></div>
-                    </div>
-                    <div class="project-card" onclick="openModal('modal5')">
-                        <img src="assets/image/carte_faerun.webp" alt="Faërun">
-                        <div class="project-content"><h3>Projet Faërun</h3><p>Jeu tour par tour (Java).</p><span class="view-more">En savoir plus +</span></div>
-                    </div>
-                    <div class="project-card" onclick="openModal('modal6')">
-                        <img src="assets/image/master_ball.png" alt="Méga SAE">
-                        <div class="project-content"><h3>Méga SAE</h3><p>Gestion d'événements.</p><span class="view-more">En savoir plus +</span></div>
-                    </div>
-                    <div class="project-card" onclick="openModal('modal7')">
-                        <img src="assets/image/chronia.png" alt="Chronia">
-                        <div class="project-content"><h3>SAÉ S3 : Chronia</h3><p>Plateforme seniors.</p><span class="view-more">En savoir plus +</span></div>
-                    </div>
+
+                    <article class="project-card" onclick="openModal('modal1')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal1')">
+                        <img src="assets/image/journal.jpg" alt="Aperçu projet Algorithmes">
+                        <div class="project-content">
+                            <h3>S1.02 – Algorithmes</h3>
+                            <p>Optimisation de dépêches.</p>
+                            <span class="view-more">En savoir plus →</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" onclick="openModal('modal2')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal2')">
+                        <img src="assets/image/ordinateur.jpg" alt="Aperçu projet Site Web">
+                        <div class="project-content">
+                            <h3>S1.05 – Site Web</h3>
+                            <p>Création pour Econocom.</p>
+                            <span class="view-more">En savoir plus →</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" onclick="openModal('modal3')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal3')">
+                        <img src="assets/image/base_de_donnee.jpg" alt="Aperçu projet Base de données">
+                        <div class="project-content">
+                            <h3>S2.04 – Données</h3>
+                            <p>Analyse d'accidents PACA.</p>
+                            <span class="view-more">En savoir plus →</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" onclick="openModal('modal4')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal4')">
+                        <img src="assets/image/livre.png.jpeg" alt="Aperçu Portfolio">
+                        <div class="project-content">
+                            <h3>Portfolio</h3>
+                            <p>Design & Développement Web.</p>
+                            <span class="view-more">En savoir plus →</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" onclick="openModal('modal5')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal5')">
+                        <img src="assets/image/carte_faerun.webp" alt="Aperçu Projet Faërun">
+                        <div class="project-content">
+                            <h3>Projet Faërun</h3>
+                            <p>RPG tactique en Java.</p>
+                            <span class="view-more">En savoir plus →</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" onclick="openModal('modal6')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal6')">
+                        <img src="assets/image/master_ball.png" alt="Aperçu Méga SAE">
+                        <div class="project-content">
+                            <h3>Méga SAE</h3>
+                            <p>Gestion d'événements.</p>
+                            <span class="view-more">En savoir plus →</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" onclick="openModal('modal7')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal7')">
+                        <img src="assets/image/chronia.png" alt="Aperçu Chronia">
+                        <div class="project-content">
+                            <h3>SAÉ S3 – Chronia</h3>
+                            <p>Plateforme d'aide aux seniors.</p>
+                            <span class="view-more">En savoir plus →</span>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
 
-        <div id="modal1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal1')">&times;</span><img src="assets/image/journal.jpg"><h3>S1.02 : Algorithmes</h3><p>Création d'algorithmes de tri de dépêches via lexiques optimisés pour réduire les ressources.</p></div></div>
-        <div id="modal2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal2')">&times;</span><img src="assets/image/ordinateur.jpg"><h3>S1.05 : Site Web</h3><p>Réalisation d'un site web pour ECONOCOM visant à attirer des stagiaires de troisième.</p></div></div>
-        <div id="modal3" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal3')">&times;</span><img src="assets/image/base_de_donnee.jpg"><h3>S2.04 : Données</h3><p>Nettoyage et analyse de données d'accidents PACA avec R et SQL.</p></div></div>
-        <div id="modal4" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal4')">&times;</span><img src="assets/image/livre.png.jpeg"><h3>Portfolio</h3><p>Création de ce portfolio interactif pour centraliser mon parcours.</p></div></div>
-        <div id="modal5" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal5')">&times;</span><img src="assets/image/carte_faerun.webp"><h3>Projet Faërun</h3><p>Développement Java d'un RPG tactique avec gestion d'inventaire et combats.</p></div></div>
-        <div id="modal6" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal6')">&times;</span><img src="assets/image/master_ball.png"><h3>Méga SAE</h3><p>Application lourde de gestion d'événements utilisant Graphes et IHM avancée.</p></div></div>
-        <div id="modal7" class="modal"><div class="modal-content"><span class="close" onclick="closeModal('modal7')">&times;</span><img src="assets/image/chronia.png"><h3>SAÉ S3 : Chronia</h3><p>Plateforme de maintien à domicile avec agenda collaboratif et chatbot IA pour seniors.</p><div style="text-align:center;"><a href="https://chronia.duckdns.org/gitlab-profile/view/accueil_externe_view.php" target="_blank" class="project-link"><i class="material-icons">launch</i> Voir l'application</a></div></div></div>
+        <!-- Modales -->
+        <div id="modal1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal1-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal1')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/journal.jpg" alt="Illustration Algorithmes">
+                <h3 id="modal1-title">S1.02 – Algorithmes</h3>
+                <p>Création d'algorithmes de tri de dépêches via des lexiques optimisés, visant à réduire la consommation de ressources et améliorer la performance de traitement.</p>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal2-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal2')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/ordinateur.jpg" alt="Illustration Site Web">
+                <h3 id="modal2-title">S1.05 – Site Web</h3>
+                <p>Réalisation d'un site web pour ECONOCOM visant à attirer et informer des stagiaires de troisième, avec une attention particulière portée à l'UX et à l'accessibilité.</p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal3-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal3')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/base_de_donnee.jpg" alt="Illustration Base de données">
+                <h3 id="modal3-title">S2.04 – Données</h3>
+                <p>Nettoyage, modélisation et analyse statistique de données d'accidents routiers en région PACA, avec R et SQL. Visualisation des résultats et formulation de recommandations.</p>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal4-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal4')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/livre.png.jpeg" alt="Illustration Portfolio">
+                <h3 id="modal4-title">Portfolio</h3>
+                <p>Conception et développement de ce portfolio interactif (HTML, CSS, JS) pour centraliser mon parcours, mes projets et faciliter ma prise de contact professionnelle.</p>
+            </div>
+        </div>
+
+        <div id="modal5" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal5-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal5')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/carte_faerun.webp" alt="Illustration Faërun">
+                <h3 id="modal5-title">Projet Faërun</h3>
+                <p>Développement en Java d'un RPG tactique au tour par tour inspiré de Faërun. Gestion d'inventaire, système de combats, architecture orientée objet et IHM graphique.</p>
+            </div>
+        </div>
+
+        <div id="modal6" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal6-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal6')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/master_ball.png" alt="Illustration Méga SAE">
+                <h3 id="modal6-title">Méga SAE – Application lourde</h3>
+                <p>Application de gestion d'événements développée en Java & JavaFX, intégrant une modélisation par graphes, une IHM avancée et des tests unitaires et fonctionnels complets.</p>
+            </div>
+        </div>
+
+        <div id="modal7" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal7-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal7')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/chronia.png" alt="Illustration Chronia">
+                <h3 id="modal7-title">SAÉ S3 – Chronia</h3>
+                <p>Plateforme web de maintien à domicile dédiée aux seniors et à leurs aidants : agenda collaboratif, chatbot IA et gestion des intervenants. Développement full-stack en PHP, JS et HTML/CSS.</p>
+                <div class="modal-link-wrapper">
+                    <a href="https://chronia.duckdns.org/gitlab-profile/view/accueil_externe_view.php" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>
+                        Voir l'application
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script>
-    function openModal(id) {
-        document.getElementById(id).style.display = "block";
-        document.body.style.overflow = "hidden";
-    }   
-    function closeModal(id) {
-        document.getElementById(id).style.display = "none";
-        document.body.style.overflow = "auto";
-    }
-    window.onclick = function(e) { if (e.target.className === 'modal') { e.target.style.display = "none"; document.body.style.overflow = "auto"; } }
-
-    const carousel = document.querySelector('.carousel-container');
-    let isPaused = false;
-    setInterval(() => {
-        if(!isPaused) {
-            if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) carousel.scrollLeft = 0;
-            else carousel.scrollLeft += 1;
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            modal.querySelector('.close').focus();
         }
-    }, 30);
-    carousel.addEventListener('mouseenter', () => isPaused = true);
-    carousel.addEventListener('mouseleave', () => isPaused = false);
-    carousel.addEventListener('wheel', (e) => { e.preventDefault(); carousel.scrollLeft += e.deltaY; });
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.addEventListener('click', e => {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(m => {
+                    m.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            }
+        });
+
+        // Auto-scroll carousel
+        const carousel = document.querySelector('.carousel-container');
+        let isPaused = false;
+        setInterval(() => {
+            if (!isPaused) {
+                if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
+                    carousel.scrollLeft = 0;
+                } else {
+                    carousel.scrollLeft += 1;
+                }
+            }
+        }, 20);
+        carousel.addEventListener('mouseenter', () => isPaused = true);
+        carousel.addEventListener('mouseleave', () => isPaused = false);
+        carousel.addEventListener('wheel', e => {
+            e.preventDefault();
+            carousel.scrollLeft += e.deltaY;
+        }, { passive: false });
     </script>
+
 </body>
 </html>

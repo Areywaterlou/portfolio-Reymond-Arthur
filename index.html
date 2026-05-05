@@ -3,62 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Arthur Reymond – Étudiant en BUT Informatique, développeur web et logiciel.">
+    
     <link rel="icon" type="image/png" href="assets/icons/flaviconAR.png">
-    <title>Portfolio - Arthur Reymond</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    
+    <title>Arthur Reymond | Portfolio</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
-    <nav class="navigation">
+
+    <nav class="navigation" aria-label="Navigation principale">
         <ul class="nav-links">
-            <li><a href="index.html" class="active">À propos de moi</a></li>
+            <li><a href="index.html" class="active">À propos</a></li>
             <li><a href="skills.html">Compétences</a></li>
-            <li><a href="contact.html">Me contacter</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="accueil">
-        <div class="profile-container">
-            <div class="name-container">
-                <h1>Arthur Reymond</h1>
-                <p class="title">Étudiant en BUT Informatique 2<sup>e</sup> année</p>
+    <header id="accueil">
+        <div class="hero-content">
+            <p class="hero-eyebrow">Bonjour, je suis</p>
+            <h1 class="hero-name">Arthur Reymond</h1>
+            <p class="hero-title">Étudiant en BUT Informatique · 2<sup>e</sup> année · Recherche d'alternance</p>
+            <div class="hero-actions">
+                <a href="assets/docs/CV institutionel  Arthur Reymond - type UGA.pdf" download="CV_Arthur_Reymond.pdf" class="btn-primary" aria-label="Télécharger le CV d'Arthur Reymond">
+                    <i class="material-icons">download</i>
+                    Télécharger mon CV
+                </a>
+                <a href="contact.html" class="btn-secondary">Me contacter</a>
             </div>
         </div>
-    </section>
+        <div class="hero-badge">AR</div>
+    </header>
 
-    <section id="presentation">
-        <h2 class="section-title">À propos de moi</h2>
-        <div class="profile-card" style="display: flex; gap: 40px; max-width: 900px; text-align: left; align-items: center; flex-wrap: wrap; justify-content: center;">
-            <img src="assets/image/portrait.jpeg" alt="Photo de profil" style="width: 250px; border-radius: 20px; border: 3px solid #00fff0;">
-            <div class="profile-right" style="flex: 1; min-width: 300px;">
-                <h3>Arthur Reymond</h3>
-                <p><strong>Âge :</strong> 19 ans</p>
-                <p><strong>Spécialité :</strong> Programmation, Web, Java</p>
-                <p><strong>Passions :</strong> Jeux vidéos, lecture, F1, animes</p>
-                <p><strong>Institut :</strong> IUT2 Grenoble</p>
-                <br>
-                <p>
-                    Étudiant passionné par le développement logiciel, j'aime relever des défis techniques à travers des projets concrets. Curieux et motivé, je cherche constamment à perfectionner mes compétences et à innover.
-                </p>
+    <main>
+        <section id="presentation" aria-labelledby="title-apropos">
+            <h2 class="section-title" id="title-apropos">À propos de moi</h2>
+            <div class="profile-card">
+                <img src="assets/image/portrait.jpeg" alt="Photo de profil d'Arthur Reymond" class="profile-photo">
+                <div class="profile-right">
+                    <h3>Arthur Reymond</h3>
+                    <ul class="profile-meta">
+                        <li><span class="meta-label">Âge</span> 19 ans</li>
+                        <li><span class="meta-label">Spécialité</span> Programmation · Web · Java</li>
+                        <li><span class="meta-label">Passions</span> Jeux vidéos · Lecture · F1 · Animés</li>
+                        <li><span class="meta-label">Institut</span> IUT2 Grenoble</li>
+                        <li><span class="meta-label">Langues</span> Français · Anglais · Espagnol</li>
+                    </ul>
+                    <p class="profile-bio">
+                        Passionné par le développement logiciel, je construis des solutions concrètes à travers des projets ambitieux. Curieux, rigoureux et à l'aise en équipe, je cherche constamment à repousser mes limites techniques et à créer des expériences utilisateur mémorables.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="parcours">
-        <h2 class="section-title">Mon Parcours</h2>
-        <div class="timeline" style="max-width: 800px; text-align: left;">
-            <div class="timeline-item" style="border-left: 2px solid #00fff0; padding-left: 20px; margin-bottom: 30px;">
-                <div class="timeline-date" style="color: #00fff0; font-weight: bold;">2024 - Présent</div>
-                <h3>BUT Informatique</h3>
-                <p>IUT2 à Grenoble - Programmation, Web & Systèmes</p>
+        <section id="parcours" aria-labelledby="title-parcours">
+            <h2 class="section-title" id="title-parcours">Mon Parcours</h2>
+            <div class="timeline">
+
+                <article class="timeline-item">
+                    <div class="timeline-date">2024 – Présent</div>
+                    <h3>BUT Informatique – Réalisation d'applications</h3>
+                    <p>IUT2 de Grenoble · Programmation, Web & Systèmes</p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">Été 2025</div>
+                    <h3>Agent de Drive – E.Leclerc</h3>
+                    <p>Livraisons, préparation de commandes et organisation logistique</p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">Été 2024 – 2025</div>
+                    <h3>Agent d'entretien & d'accueil – SMVIC</h3>
+                    <p>Utilisation de machines, expérience polyvalente sur plusieurs postes</p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">2021 – 2024</div>
+                    <h3>Baccalauréat Général – Mention Assez Bien</h3>
+                    <p>Lycée La Saulaie · Spécialités Mathématiques & Physique (+ Maths Expertes)</p>
+                </article>
+
             </div>
-            <div class="timeline-item" style="border-left: 2px solid #00fff0; padding-left: 20px;">
-                <div class="timeline-date" style="color: #00fff0; font-weight: bold;">2021 - 2024</div>
-                <h3>Bac Général - Mention Assez Bien</h3>
-                <p>Lycée La Saulaie - Spécialités Mathématiques & Physique</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+    <script>
+        // Highlight nav link on scroll
+        const sections = document.querySelectorAll('section[id], header[id]');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { threshold: 0.5 });
+        sections.forEach(s => observer.observe(s));
+    </script>
 </body>
 </html>

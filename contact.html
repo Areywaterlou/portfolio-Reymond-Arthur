@@ -3,40 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez Arthur Reymond – Développeur web et logiciel en recherche d'alternance.">
     <link rel="icon" type="image/png" href="assets/icons/flaviconAR.png">
-    <title>Contact - Arthur Reymond</title>
+    <title>Contact – Arthur Reymond</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navigation">
+
+    <nav class="navigation" aria-label="Navigation principale">
         <ul class="nav-links">
-            <li><a href="index.html">À propos de moi</a></li>
+            <li><a href="index.html">À propos</a></li>
             <li><a href="skills.html">Compétences</a></li>
-            <li><a href="contact.html" class="active">Me contacter</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
 
     <main class="portfolio">
-        <section class="section">
-            <h2 class="section-title">Me contacter</h2>
+        <section aria-labelledby="title-contact">
+            <h2 class="section-title" id="title-contact">Me contacter</h2>
+            <p class="contact-intro">Je suis actuellement à la recherche d'une alternance pour septembre 2026. N'hésitez pas à me contacter !</p>
+
             <div class="contact-container">
                 <div class="contact-info">
+
+                    <a href="mailto:arthur.reymond@etu.univ-grenoble-alpes.fr?subject=Opportunité%20d%27alternance%20-%20Portfolio%20Arthur%20Reymond" class="contact-item contact-item--link" aria-label="Envoyer un email à Arthur Reymond">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>arthur.reymond@etu.univ-grenoble-alpes.fr</p>
+                        </div>
+                    </a>
+
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div><h3>Email</h3><p><a href="mailto:arthur.reymond@etu.univ-grenoble-alpes.fr" style="color: #00fff0;">arthur.reymond@etu.univ-grenoble-alpes.fr</a></p></div>
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+33782209701">+33 7 82 20 97 01</a></p>
+                        </div>
                     </div>
+
                     <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div><h3>Téléphone</h3><p>+33 7 82 20 97 01</p></div>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <div>
+                            <h3>Localisation</h3>
+                            <p>Chatte, Isère (38) · Permis B</p>
+                        </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://github.com/Areywaterlou" target="_blank" rel="noopener" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank" rel="noopener" class="social-link"><i class="fab fa-linkedin"></i></a>
+
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                        <div>
+                            <h3>Formation</h3>
+                            <p>IUT2 Grenoble – BUT Informatique</p>
+                        </div>
                     </div>
+
+                    <div class="social-links" aria-label="Réseaux sociaux">
+                        <a href="https://github.com/Areywaterlou" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil GitHub d'Arthur Reymond">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil LinkedIn d'Arthur Reymond">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <a href="assets/docs/CV institutionel  Arthur Reymond - type UGA.pdf" download="CV_Arthur_Reymond.pdf" class="btn-primary btn-cv" aria-label="Télécharger le CV d'Arthur Reymond">
+                        <i class="fas fa-file-download" aria-hidden="true"></i>
+                        Télécharger mon CV
+                    </a>
+
                 </div>
             </div>
         </section>
     </main>
+
 </body>
 </html>
