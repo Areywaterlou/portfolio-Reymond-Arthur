@@ -22,52 +22,41 @@
 
     <main class="portfolio">
 
+        <!-- ===== COMPÉTENCES ===== -->
         <section aria-labelledby="title-competences">
             <h1 class="section-title" id="title-competences">Mes Compétences</h1>
             <div class="skills-grid-large">
 
-                <div class="skill-main-card">
+                <div class="skill-main-card reveal">
                     <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">terminal</i></div>
                     <div class="skill-info">
                         <h3>Développement Web & Logiciel</h3>
                         <div class="skill-list-complex">
-                            <span class="item">Java</span>
-                            <span class="item">JavaScript</span>
-                            <span class="item">PHP</span>
-                            <span class="item">HTML5 / CSS3</span>
-                            <span class="item">C / C++</span>
-                            <span class="item">Symfony</span>
-                            <span class="item">JavaFX</span>
-                            <span class="item">Java Android</span>
+                            <span class="item">Java</span><span class="item">JavaScript</span><span class="item">PHP</span>
+                            <span class="item">HTML5 / CSS3</span><span class="item">C / C++</span><span class="item">Symfony</span>
+                            <span class="item">JavaFX</span><span class="item">Java Android</span><span class="item">WordPress</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-main-card">
+                <div class="skill-main-card reveal" data-delay="120">
                     <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">settings_ethernet</i></div>
                     <div class="skill-info">
                         <h3>Systèmes & Données</h3>
                         <div class="skill-list-complex">
-                            <span class="item">Linux</span>
-                            <span class="item">SQL / PostgreSQL</span>
-                            <span class="item">SQLite</span>
-                            <span class="item">R (Data Science)</span>
-                            <span class="item">Docker</span>
+                            <span class="item">Linux</span><span class="item">SQL / PostgreSQL</span><span class="item">SQLite</span>
+                            <span class="item">R (Data Science)</span><span class="item">Docker</span><span class="item">Supabase</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="skill-main-card">
+                <div class="skill-main-card reveal" data-delay="240">
                     <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">architecture</i></div>
                     <div class="skill-info">
                         <h3>Conception & Analyse</h3>
                         <div class="skill-list-complex">
-                            <span class="item">UML</span>
-                            <span class="item">BPMN</span>
-                            <span class="item">Méthodes Agiles</span>
-                            <span class="item">IHM / UX</span>
-                            <span class="item">Tests unitaires</span>
-                            <span class="item">DevOps</span>
+                            <span class="item">UML</span><span class="item">BPMN</span><span class="item">Méthodes Agiles</span>
+                            <span class="item">IHM / UX</span><span class="item">Tests unitaires</span><span class="item">DevOps</span>
                         </div>
                     </div>
                 </div>
@@ -75,220 +64,413 @@
             </div>
         </section>
 
-        <section aria-labelledby="title-projets">
+        <!-- ===== PROJETS PAR SEMESTRE ===== -->
+        <section aria-labelledby="title-projets" id="projets">
             <h2 class="section-title" id="title-projets">Mes Projets</h2>
-            <div class="carousel-container" role="region" aria-label="Carrousel de projets">
-                <div class="projects-carousel">
 
-                    <article class="project-card" onclick="openModal('modal1')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal1')">
-                        <img src="assets/image/journal.jpg" alt="Aperçu projet Algorithmes">
-                        <div class="project-content">
-                            <h3>S1.02 – Algorithmes</h3>
-                            <p>Optimisation de dépêches.</p>
-                            <span class="view-more">En savoir plus →</span>
-                        </div>
-                    </article>
+            <div class="semester-tabs" role="tablist" aria-label="Filtrer par semestre">
+                <button class="tab-btn active" role="tab" aria-selected="true"  data-filter="all">Tous</button>
+                <button class="tab-btn"         role="tab" aria-selected="false" data-filter="s1">S1</button>
+                <button class="tab-btn"         role="tab" aria-selected="false" data-filter="s2">S2</button>
+                <button class="tab-btn"         role="tab" aria-selected="false" data-filter="s3">S3</button>
+                <button class="tab-btn"         role="tab" aria-selected="false" data-filter="s4">S4</button>
+                <button class="tab-btn tab-btn--wip" role="tab" aria-selected="false" data-filter="wip">En cours</button>
+            </div>
 
-                    <article class="project-card" onclick="openModal('modal2')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal2')">
-                        <img src="assets/image/ordinateur.jpg" alt="Aperçu projet Site Web">
-                        <div class="project-content">
-                            <h3>S1.05 – Site Web</h3>
-                            <p>Création pour Econocom.</p>
-                            <span class="view-more">En savoir plus →</span>
-                        </div>
-                    </article>
+            <div class="projects-grid" id="projects-grid">
 
-                    <article class="project-card" onclick="openModal('modal3')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal3')">
-                        <img src="assets/image/base_de_donnee.jpg" alt="Aperçu projet Base de données">
-                        <div class="project-content">
-                            <h3>S2.04 – Données</h3>
-                            <p>Analyse d'accidents PACA.</p>
-                            <span class="view-more">En savoir plus →</span>
-                        </div>
-                    </article>
+                <!-- S1 -->
+                <article class="project-card reveal" data-semester="s1" onclick="openModal('modal1')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal1')">
+                    <div class="project-badge">S1</div>
+                    <img src="assets/image/journal.jpg" alt="Aperçu projet Algorithmes">
+                    <div class="project-content">
+                        <h3>S1.02 – Algorithmes</h3>
+                        <p>Optimisation de dépêches.</p>
+                        <div class="project-tags"><span>Java</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
 
-                    <article class="project-card" onclick="openModal('modal4')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal4')">
-                        <img src="assets/image/livre.png.jpeg" alt="Aperçu Portfolio">
-                        <div class="project-content">
-                            <h3>Portfolio</h3>
-                            <p>Design & Développement Web.</p>
-                            <span class="view-more">En savoir plus →</span>
-                        </div>
-                    </article>
+                <article class="project-card reveal" data-semester="s1" onclick="openModal('modal2')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal2')">
+                    <div class="project-badge">S1</div>
+                    <img src="assets/image/ordinateur.jpg" alt="Aperçu projet Site Web">
+                    <div class="project-content">
+                        <h3>S1.05 – Site Web</h3>
+                        <p>Création pour Econocom.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
 
-                    <article class="project-card" onclick="openModal('modal5')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal5')">
-                        <img src="assets/image/carte_faerun.webp" alt="Aperçu Projet Faërun">
-                        <div class="project-content">
-                            <h3>Projet Faërun</h3>
-                            <p>RPG tactique en Java.</p>
-                            <span class="view-more">En savoir plus →</span>
-                        </div>
-                    </article>
+                <!-- S2 -->
+                <article class="project-card reveal" data-semester="s2" onclick="openModal('modal3')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal3')">
+                    <div class="project-badge">S2</div>
+                    <img src="assets/image/base_de_donnee.jpg" alt="Aperçu projet Base de données">
+                    <div class="project-content">
+                        <h3>S2.04 – Données</h3>
+                        <p>Analyse d'accidents PACA.</p>
+                        <div class="project-tags"><span>R</span><span>SQL</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
 
-                    <article class="project-card" onclick="openModal('modal6')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal6')">
-                        <img src="assets/image/master_ball.png" alt="Aperçu Méga SAE">
-                        <div class="project-content">
-                            <h3>Méga SAE</h3>
-                            <p>Gestion d'événements.</p>
-                            <span class="view-more">En savoir plus →</span>
-                        </div>
-                    </article>
+                <!-- S3 -->
+                <article class="project-card reveal" data-semester="s3" onclick="openModal('modal5')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal5')">
+                    <div class="project-badge">S3</div>
+                    <img src="assets/image/carte_faerun.webp" alt="Aperçu Projet Faërun">
+                    <div class="project-content">
+                        <h3>Projet Faërun</h3>
+                        <p>RPG tactique au tour par tour.</p>
+                        <div class="project-tags"><span>Java</span><span>JavaFX</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
 
-                    <article class="project-card" onclick="openModal('modal7')" tabindex="0" aria-haspopup="dialog" onkeydown="if(event.key==='Enter')openModal('modal7')">
-                        <img src="assets/image/chronia.png" alt="Aperçu Chronia">
-                        <div class="project-content">
-                            <h3>SAÉ S3 – Chronia</h3>
-                            <p>Plateforme d'aide aux seniors.</p>
-                            <span class="view-more">En savoir plus →</span>
-                        </div>
-                    </article>
+                <article class="project-card reveal" data-semester="s3" onclick="openModal('modal6')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal6')">
+                    <div class="project-badge">S3</div>
+                    <img src="assets/image/master_ball.png" alt="Aperçu Méga SAE">
+                    <div class="project-content">
+                        <h3>Méga SAE</h3>
+                        <p>App lourde de gestion d'événements.</p>
+                        <div class="project-tags"><span>Java</span><span>JavaFX</span><span>Graphes</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
 
-                </div>
+                <article class="project-card reveal" data-semester="s3" onclick="openModal('modal7')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal7')">
+                    <div class="project-badge">S3</div>
+                    <img src="assets/image/chronia.png" alt="Aperçu Chronia">
+                    <div class="project-content">
+                        <h3>SAÉ S3 – Chronia</h3>
+                        <p>Plateforme d'aide aux seniors.</p>
+                        <div class="project-tags"><span>PHP</span><span>JS</span><span>SQL</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <!-- S4 -->
+                <article class="project-card reveal" data-semester="s4" onclick="openModal('modal8')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal8')">
+                    <div class="project-badge">S4</div>
+                    <img src="assets/image/crypto-tracker.png" alt="Aperçu Crypto Tracker" onerror="this.src='assets/image/ordinateur.jpg'">
+                    <div class="project-content">
+                        <h3>TP R4.A.10 – Crypto Tracker</h3>
+                        <p>Suivi cryptos via API CoinGecko.</p>
+                        <div class="project-tags"><span>JS</span><span>API REST</span><span>MVC</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-semester="s4" onclick="openModal('modal9')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal9')">
+                    <div class="project-badge">S4</div>
+                    <img src="assets/image/boutique.png" alt="Aperçu Boutique Symfony" onerror="this.src='assets/image/ordinateur.jpg'">
+                    <div class="project-content">
+                        <h3>R4.01 – Boutique Symfony</h3>
+                        <p>E-commerce full-stack avec extras.</p>
+                        <div class="project-tags"><span>Symfony</span><span>PHP</span><span>Docker</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-semester="s4" onclick="openModal('modal10')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal10')">
+                    <div class="project-badge">S4</div>
+                    <img src="assets/image/ecole_loustics.png" alt="Aperçu École des Loustics" onerror="this.src='assets/image/base_de_donnee.jpg'">
+                    <div class="project-content">
+                        <h3>SAÉ S4 – École des Loustics</h3>
+                        <p>App Android éducative rénovée.</p>
+                        <div class="project-tags"><span>Java Android</span><span>Room DB</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-semester="s4" onclick="openModal('modal11')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal11')">
+                    <div class="project-badge">S4</div>
+                    <img src="assets/image/anniv.png" alt="Aperçu Site Anniversaire" onerror="this.src='assets/image/fond_bleu.jpg'">
+                    <div class="project-content">
+                        <h3>Site Anniversaire</h3>
+                        <p>Invitation VIP 20 ans + invités.</p>
+                        <div class="project-tags"><span>JS</span><span>Supabase</span><span>MVC</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-semester="s4" onclick="openModal('modal4')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal4')">
+                    <div class="project-badge">S4</div>
+                    <img src="assets/image/livre.png.jpeg" alt="Aperçu Portfolio">
+                    <div class="project-content">
+                        <h3>Portfolio</h3>
+                        <p>Design & développement web perso.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <!-- En cours -->
+                <article class="project-card project-card--wip reveal" data-semester="wip" onclick="openModal('modal12')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal12')">
+                    <div class="project-badge project-badge--wip">En cours</div>
+                    <img src="assets/image/wordpress.png" alt="Aperçu Stage WordPress" onerror="this.src='assets/image/ordinateur.jpg'">
+                    <div class="project-content">
+                        <h3>Stage – Développeur WordPress</h3>
+                        <p>Refonte et dev de sites clients.</p>
+                        <div class="project-tags"><span>WordPress</span><span>PHP</span><span>CSS</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
             </div>
         </section>
 
-        <!-- Modales -->
+        <!-- ===== MODALES ===== -->
+
         <div id="modal1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal1-title">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('modal1')" aria-label="Fermer">&times;</button>
-                <img src="assets/image/journal.jpg" alt="Illustration Algorithmes">
-                <h3 id="modal1-title">S1.02 – Algorithmes</h3>
-                <p>Création d'algorithmes de tri de dépêches via des lexiques optimisés, visant à réduire la consommation de ressources et améliorer la performance de traitement.</p>
+                <img src="assets/image/journal.jpg" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">S1</span><span class="modal-tag">Java</span></div>
+                <h3 id="modal1-title">S1.02 – Algorithmes de tri</h3>
+                <p>Conception d'algorithmes de tri de dépêches via des lexiques optimisés. L'objectif était de minimiser la consommation de ressources tout en améliorant la performance de traitement sur de grands volumes de données textuelles.</p>
             </div>
         </div>
 
         <div id="modal2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal2-title">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('modal2')" aria-label="Fermer">&times;</button>
-                <img src="assets/image/ordinateur.jpg" alt="Illustration Site Web">
-                <h3 id="modal2-title">S1.05 – Site Web</h3>
-                <p>Réalisation d'un site web pour ECONOCOM visant à attirer et informer des stagiaires de troisième, avec une attention particulière portée à l'UX et à l'accessibilité.</p>
+                <img src="assets/image/ordinateur.jpg" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">S1</span><span class="modal-tag">HTML</span><span class="modal-tag">CSS</span></div>
+                <h3 id="modal2-title">S1.05 – Site Web Econocom</h3>
+                <p>Réalisation d'un site vitrine pour ECONOCOM, conçu pour attirer et informer des stagiaires de troisième. Attention particulière portée à l'UX, l'accessibilité et le responsive design.</p>
             </div>
         </div>
 
         <div id="modal3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal3-title">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('modal3')" aria-label="Fermer">&times;</button>
-                <img src="assets/image/base_de_donnee.jpg" alt="Illustration Base de données">
-                <h3 id="modal3-title">S2.04 – Données</h3>
-                <p>Nettoyage, modélisation et analyse statistique de données d'accidents routiers en région PACA, avec R et SQL. Visualisation des résultats et formulation de recommandations.</p>
+                <img src="assets/image/base_de_donnee.jpg" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">S2</span><span class="modal-tag">R</span><span class="modal-tag">SQL</span></div>
+                <h3 id="modal3-title">S2.04 – Analyse de données PACA</h3>
+                <p>Nettoyage, modélisation et analyse statistique d'un jeu de données d'accidents routiers en région PACA. Utilisation de R pour les statistiques descriptives et SQL pour les requêtes. Visualisation des résultats et formulation de recommandations argumentées.</p>
             </div>
         </div>
 
         <div id="modal4" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal4-title">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('modal4')" aria-label="Fermer">&times;</button>
-                <img src="assets/image/livre.png.jpeg" alt="Illustration Portfolio">
-                <h3 id="modal4-title">Portfolio</h3>
-                <p>Conception et développement de ce portfolio interactif (HTML, CSS, JS) pour centraliser mon parcours, mes projets et faciliter ma prise de contact professionnelle.</p>
+                <img src="assets/image/livre.png.jpeg" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">S4</span><span class="modal-tag">HTML</span><span class="modal-tag">CSS</span><span class="modal-tag">JS</span></div>
+                <h3 id="modal4-title">Portfolio personnel</h3>
+                <p>Conception et développement de ce portfolio interactif pour centraliser mon parcours académique, mes projets et faciliter ma prise de contact professionnelle. Design néon sombre, animations au scroll et modales accessibles.</p>
+                <div class="modal-link-wrapper">
+                    <a href="https://areywaterlou.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Voir le site
+                    </a>
+                </div>
             </div>
         </div>
 
         <div id="modal5" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal5-title">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('modal5')" aria-label="Fermer">&times;</button>
-                <img src="assets/image/carte_faerun.webp" alt="Illustration Faërun">
-                <h3 id="modal5-title">Projet Faërun</h3>
-                <p>Développement en Java d'un RPG tactique au tour par tour inspiré de Faërun. Gestion d'inventaire, système de combats, architecture orientée objet et IHM graphique.</p>
+                <img src="assets/image/carte_faerun.webp" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">S3</span><span class="modal-tag">Java</span><span class="modal-tag">JavaFX</span></div>
+                <h3 id="modal5-title">Projet Faërun – RPG tactique</h3>
+                <p>Développement en Java d'un RPG tactique au tour par tour inspiré de l'univers de Faërun. Fonctionnalités : gestion d'inventaire, système de combats, architecture orientée objet rigoureuse et IHM graphique JavaFX.</p>
             </div>
         </div>
 
         <div id="modal6" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal6-title">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('modal6')" aria-label="Fermer">&times;</button>
-                <img src="assets/image/master_ball.png" alt="Illustration Méga SAE">
-                <h3 id="modal6-title">Méga SAE – Application lourde</h3>
-                <p>Application de gestion d'événements développée en Java & JavaFX, intégrant une modélisation par graphes, une IHM avancée et des tests unitaires et fonctionnels complets.</p>
+                <img src="assets/image/master_ball.png" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">S3</span><span class="modal-tag">Java</span><span class="modal-tag">JavaFX</span><span class="modal-tag">Graphes</span></div>
+                <h3 id="modal6-title">Méga SAE – Application de gestion</h3>
+                <p>Application lourde de gestion d'événements en Java & JavaFX. Modélisation par graphes pour les relations entre événements, IHM avancée, tests unitaires JUnit et architecture MVC.</p>
             </div>
         </div>
 
         <div id="modal7" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal7-title">
             <div class="modal-content">
                 <button class="close" onclick="closeModal('modal7')" aria-label="Fermer">&times;</button>
-                <img src="assets/image/chronia.png" alt="Illustration Chronia">
+                <img src="assets/image/chronia.png" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">S3</span><span class="modal-tag">PHP</span><span class="modal-tag">JS</span><span class="modal-tag">SQL</span></div>
                 <h3 id="modal7-title">SAÉ S3 – Chronia</h3>
-                <p>Plateforme web de maintien à domicile dédiée aux seniors et à leurs aidants : agenda collaboratif, chatbot IA et gestion des intervenants. Développement full-stack en PHP, JS et HTML/CSS.</p>
+                <p>Plateforme web de maintien à domicile pour seniors et aidants : agenda collaboratif, chatbot IA et gestion des intervenants. Développement full-stack PHP/JS/HTML, déploiement sur VPS OVH.</p>
                 <div class="modal-link-wrapper">
-                    <a href="https://chronia.duckdns.org/gitlab-profile/view/accueil_externe_view.php" target="_blank" rel="noopener noreferrer" class="project-link">
-                        <i class="material-icons">launch</i>
-                        Voir l'application
+                    <a href="http://vps-e885b886.vps.ovh.net/chronia/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Voir l'application
                     </a>
                 </div>
             </div>
         </div>
 
         <div id="modal8" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal8-title">
-        <div class="modal-content">
-            <button class="close" onclick="closeModal('modal8')" aria-label="Fermer">&times;</button>
-            
-            <img src="assets/image/crypto-tracker.png" alt="Illustration Crypto Tracker">
-            
-            <h3 id="modal8-title">TP R4.A.10 – Crypto Tracker Real-Time</h3>
-            
-            <p>
-                Conception d'une application de suivi de cryptomonnaies utilisant une API de marché (type CoinGecko). 
-                L'interface permet de rechercher des actifs, de consulter des données détaillées (prix, capitalisation, volume) et de gérer une liste de favoris personnalisée via <strong>LocalStorage</strong>. 
-                Focus sur la manipulation dynamique du DOM et la gestion des flux de données asynchrones.
-            </p>
-            
-            <div class="modal-link-wrapper">
-                <a href="https://areywaterlou.github.io/r4a10-tp-api-2026-reymonar-seranoa/" target="_blank" rel="noopener noreferrer" class="project-link">
-                    <i class="material-icons">monetization_on</i>
-                    Lancer le Tracker
-                </a>
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal8')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/crypto-tracker.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">S4</span><span class="modal-tag">JavaScript</span><span class="modal-tag">API REST</span><span class="modal-tag">MVC</span></div>
+                <h3 id="modal8-title">TP R4.A.10 – Crypto Tracker</h3>
+                <p>Application de suivi de cryptomonnaies en temps réel via l'API CoinGecko. Recherche d'actifs, consultation de prix/capitalisation/volume, liste de favoris persistante en LocalStorage. Architecture MVC JavaScript modulaire et gestion des flux asynchrones.</p>
+                <div class="modal-link-wrapper">
+                    <a href="https://areywaterlou.github.io/r4a10-tp-api-2026-reymonar-seranoa/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">monetization_on</i>Lancer le Tracker
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+
+        <div id="modal9" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal9-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal9')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/boutique.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">S4</span><span class="modal-tag">Symfony</span><span class="modal-tag">PHP</span><span class="modal-tag">Docker</span></div>
+                <h3 id="modal9-title">R4.01 – Boutique en ligne Symfony</h3>
+                <p>Application e-commerce complète avec Symfony 7 : catalogue par catégories, panier en session, authentification sécurisée, gestion des commandes et historique usager.</p>
+                <ul class="modal-extras">
+                    <li><i class="material-icons">star</i>Internationalisation FR/EN (composant Translation Symfony)</li>
+                    <li><i class="material-icons">star</i>Sidebar dynamique avec compteur de panier temps réel</li>
+                    <li><i class="material-icons">star</i>Barre de recherche produits (hors cahier des charges)</li>
+                    <li><i class="material-icons">star</i>Architecture Docker complète (PHP, PostgreSQL, Nginx)</li>
+                    <li><i class="material-icons">star</i>PHPDoc exhaustif sur toutes les classes et méthodes</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modal10" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal10-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal10')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/ecole_loustics.png" alt="" onerror="this.src='assets/image/base_de_donnee.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">S4</span><span class="modal-tag">Java Android</span><span class="modal-tag">Room DB</span><span class="modal-tag">Symfony</span></div>
+                <h3 id="modal10-title">SAÉ S4 – L'École des Loustics</h3>
+                <p>Rénovation d'une application Android éducative pour les élèves de primaire : audit, refactoring, normalisation BD (3NF), amélioration de l'ergonomie et ajout de fonctionnalités.</p>
+                <ul class="modal-extras">
+                    <li><i class="material-icons">star</i>3 matières : Maths, Français, Histoire</li>
+                    <li><i class="material-icons">star</i>Système de comptes utilisateurs avec suivi de progression (XP)</li>
+                    <li><i class="material-icons">star</i>Base de données Room avec DAO et migrations</li>
+                    <li><i class="material-icons">star</i>Back-office Symfony pour la gestion du contenu</li>
+                    <li><i class="material-icons">star</i>Déploiement Docker + plan de test qualité rédigé</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modal11" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal11-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal11')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/anniv.png" alt="" onerror="this.src='assets/image/fond_bleu.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">S4</span><span class="modal-tag">JavaScript</span><span class="modal-tag">Supabase</span><span class="modal-tag">MVC</span></div>
+                <h3 id="modal11-title">Site Anniversaire – Invitation VIP</h3>
+                <p>Application web pour gérer les invitations de mes 20 ans : formulaire d'inscription, persistance en temps réel via Supabase (PostgreSQL cloud), et page d'affichage des présents avec galerie photo.</p>
+                <ul class="modal-extras">
+                    <li><i class="material-icons">star</i>Architecture MVC JavaScript pure, sans framework</li>
+                    <li><i class="material-icons">star</i>Backend Supabase avec authentification et règles RLS</li>
+                    <li><i class="material-icons">star</i>Design split-screen animé avec effet néon</li>
+                    <li><i class="material-icons">star</i>Mise à jour de la liste des invités en temps réel</li>
+                </ul>
+                <div class="modal-link-wrapper">
+                    <a href="https://areywaterlou.github.io/anniv-app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">celebration</i>Voir le site
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal12" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal12-title">
+            <div class="modal-content">
+                <button class="close" onclick="closeModal('modal12')" aria-label="Fermer">&times;</button>
+                <img src="assets/image/wordpress.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm modal-badge-sm--wip">En cours</span><span class="modal-tag">WordPress</span><span class="modal-tag">PHP</span><span class="modal-tag">CSS</span></div>
+                <h3 id="modal12-title">Stage – Développeur WordPress</h3>
+                <p>Stage en cours axé sur le développement web WordPress : conception, refonte et maintenance de sites clients, développement de thèmes et plugins, optimisation des performances et de l'accessibilité.</p>
+                <ul class="modal-extras">
+                    <li><i class="material-icons">build</i>Développement de thèmes enfants et personnalisés</li>
+                    <li><i class="material-icons">build</i>Création de plugins PHP sur mesure</li>
+                    <li><i class="material-icons">build</i>Optimisation SEO et performances (Lighthouse)</li>
+                    <li><i class="material-icons">build</i>Intégration de maquettes et adaptation responsive</li>
+                </ul>
+            </div>
+        </div>
 
     </main>
 
     <script>
+        // ========== MODALES ==========
         function openModal(id) {
             const modal = document.getElementById(id);
-            modal.style.display = 'block';
+            modal.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('modal--open')));
             modal.querySelector('.close').focus();
         }
 
         function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-            document.body.style.overflow = 'auto';
+            const modal = document.getElementById(id);
+            modal.classList.remove('modal--open');
+            modal.addEventListener('transitionend', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, { once: true });
         }
 
         window.addEventListener('click', e => {
-            if (e.target.classList.contains('modal')) {
-                e.target.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
+            if (e.target.classList.contains('modal')) closeModal(e.target.id);
         });
 
         window.addEventListener('keydown', e => {
             if (e.key === 'Escape') {
                 document.querySelectorAll('.modal').forEach(m => {
-                    m.style.display = 'none';
-                    document.body.style.overflow = 'auto';
+                    if (m.style.display === 'flex') closeModal(m.id);
                 });
             }
         });
 
-        // Auto-scroll carousel
-        const carousel = document.querySelector('.carousel-container');
-        let isPaused = false;
-        setInterval(() => {
-            if (!isPaused) {
-                if (carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1) {
-                    carousel.scrollLeft = 0;
-                } else {
-                    carousel.scrollLeft += 1;
+        // ========== FILTRES SEMESTRE ==========
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const cards   = document.querySelectorAll('.project-card');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+
+                const filter = btn.dataset.filter;
+                let delay = 0;
+
+                cards.forEach(card => {
+                    const match = filter === 'all' || card.dataset.semester === filter;
+                    if (match) {
+                        card.style.transitionDelay = `${delay}ms`;
+                        card.style.display = 'flex';
+                        requestAnimationFrame(() => requestAnimationFrame(() => {
+                            card.classList.remove('card-hidden');
+                            card.classList.add('card-visible');
+                        }));
+                        delay += 50;
+                    } else {
+                        card.style.transitionDelay = '0ms';
+                        card.classList.add('card-hidden');
+                        card.classList.remove('card-visible');
+                        card.addEventListener('transitionend', () => {
+                            if (card.classList.contains('card-hidden')) card.style.display = 'none';
+                        }, { once: true });
+                    }
+                });
+            });
+        });
+
+        // ========== SCROLL REVEAL ==========
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const delay = parseInt(el.dataset.delay || 0);
+                    setTimeout(() => el.classList.add('revealed'), delay);
+                    revealObserver.unobserve(el);
                 }
-            }
-        }, 20);
-        carousel.addEventListener('mouseenter', () => isPaused = true);
-        carousel.addEventListener('mouseleave', () => isPaused = false);
-        carousel.addEventListener('wheel', e => {
-            e.preventDefault();
-            carousel.scrollLeft += e.deltaY;
-        }, { passive: false });
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            if (el.closest('.projects-grid')) el.dataset.delay = (i % 4) * 70;
+            revealObserver.observe(el);
+        });
     </script>
 
 </body>
