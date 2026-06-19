@@ -1,105 +1,68 @@
-/* ==============================
-   PORTFOLIO – ARTHUR REYMOND
-   main.js
-   ============================== */
+/* PORTFOLIO – ARTHUR REYMOND · main.js */
 
-// ========== MODALES ==========
+// ===== MODALES =====
 function openModal(id) {
-    const modal = document.getElementById(id);
-    if (!modal) return;
-    modal.style.display = 'flex';
+    const m = document.getElementById(id);
+    if (!m) return;
+    m.style.display = 'flex';
     document.body.style.overflow = 'hidden';
-    requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('modal--open')));
-    const closeBtn = modal.querySelector('.close');
-    if (closeBtn) closeBtn.focus();
+    requestAnimationFrame(() => requestAnimationFrame(() => m.classList.add('modal--open')));
+    const btn = m.querySelector('.close');
+    if (btn) btn.focus();
 }
-
 function closeModal(id) {
-    const modal = document.getElementById(id);
-    if (!modal) return;
-    modal.classList.remove('modal--open');
-    modal.addEventListener('transitionend', () => {
-        modal.style.display = 'none';
+    const m = document.getElementById(id);
+    if (!m) return;
+    m.classList.remove('modal--open');
+    m.addEventListener('transitionend', () => {
+        m.style.display = 'none';
         document.body.style.overflow = 'auto';
     }, { once: true });
 }
-
-window.addEventListener('click', e => {
-    if (e.target.classList.contains('modal')) closeModal(e.target.id);
-});
-
+window.addEventListener('click', e => { if (e.target.classList.contains('modal')) closeModal(e.target.id); });
 window.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-        document.querySelectorAll('.modal').forEach(m => {
-            if (m.style.display === 'flex') closeModal(m.id);
-        });
-    }
+    if (e.key === 'Escape') document.querySelectorAll('.modal').forEach(m => { if (m.style.display === 'flex') closeModal(m.id); });
 });
 
-// ========== INIT ========== 
+// ===== FILTRES =====
 document.addEventListener('DOMContentLoaded', () => {
+    const tabs  = document.querySelectorAll('.tab-btn');
+    const cards = document.querySelectorAll('.project-card');
 
-    // ---- SCROLL REVEAL pour skill-cards et autres éléments .reveal (PAS les project-cards) ----
-    const revealObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el    = entry.target;
-                const delay = parseInt(el.dataset.delay || 0);
-                setTimeout(() => el.classList.add('revealed'), delay);
-                revealObserver.unobserve(el);
-            }
-        });
-    }, { threshold: 0.1 });
+    // Toutes les cartes visibles au départ
+    cards.forEach(c => { c.style.display = 'flex'; });
 
-    document.querySelectorAll('.reveal:not(.project-card)').forEach(el => {
-        revealObserver.observe(el);
-    });
-
-    // ---- CARTES PROJETS : visibles d'emblée, pas de scroll reveal ----
-    document.querySelectorAll('.project-card').forEach(card => {
-        card.classList.remove('reveal');
-        card.style.opacity   = '1';
-        card.style.transform = 'none';
-        card.style.display   = 'flex';
-    });
-
-    // ---- FILTRES SEMESTRE ----
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const cards   = document.querySelectorAll('.project-card');
-
-    tabBtns.forEach(btn => {
+    tabs.forEach(btn => {
         btn.addEventListener('click', () => {
-            tabBtns.forEach(b => {
-                b.classList.remove('active');
-                b.setAttribute('aria-selected', 'false');
-            });
+            tabs.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
             btn.classList.add('active');
             btn.setAttribute('aria-selected', 'true');
 
             const filter = btn.dataset.filter;
-            let visibleIndex = 0;
-
+            let idx = 0;
             cards.forEach(card => {
-                const match = filter === 'all' || card.dataset.semester === filter;
-
-                if (match) {
+                if (filter === 'all' || card.dataset.semester === filter) {
                     card.style.display = 'flex';
-                    const delay = visibleIndex * 60;
-                    visibleIndex++;
-                    // reflow avant la transition
-                    void card.offsetWidth;
-                    card.style.transitionDelay = `${delay}ms`;
-                    card.style.opacity   = '1';
-                    card.style.transform = 'translateY(0) scale(1)';
+                    card.style.animationDelay = `${idx++ * 50}ms`;
+                    card.classList.remove('card-enter');
+                    void card.offsetWidth; // reflow
+                    card.classList.add('card-enter');
                 } else {
-                    card.style.transitionDelay = '0ms';
-                    card.style.opacity   = '0';
-                    card.style.transform = 'translateY(10px) scale(0.96)';
-                    card.addEventListener('transitionend', () => {
-                        if (card.style.opacity === '0') card.style.display = 'none';
-                    }, { once: true });
+                    card.style.display = 'none';
+                    card.classList.remove('card-enter');
                 }
             });
         });
+    });
+
+    // ===== SCROLL REVEAL skill-cards (JS only, zéro CSS) =====
+    document.querySelectorAll('.skill-main-card').forEach(el => {
+        el.style.cssText += 'opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease;';
+        const delay = parseInt(el.dataset.delay || 0);
+        new IntersectionObserver(([entry], obs) => {
+            if (!entry.isIntersecting) return;
+            setTimeout(() => { el.style.opacity = '1'; el.style.transform = 'none'; }, delay);
+            obs.disconnect();
+        }, { threshold: 0.15 }).observe(el);
     });
 });
