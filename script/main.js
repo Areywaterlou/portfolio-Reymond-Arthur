@@ -36,22 +36,39 @@ window.addEventListener('keydown', e => {
     }
 });
 
-// ========== FILTRES SEMESTRE ==========
+// ========== INIT ========== 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ---- SCROLL REVEAL pour skill-cards et autres éléments .reveal (PAS les project-cards) ----
+    const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el    = entry.target;
+                const delay = parseInt(el.dataset.delay || 0);
+                setTimeout(() => el.classList.add('revealed'), delay);
+                revealObserver.unobserve(el);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal:not(.project-card)').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // ---- CARTES PROJETS : visibles d'emblée, pas de scroll reveal ----
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.classList.remove('reveal');
+        card.style.opacity   = '1';
+        card.style.transform = 'none';
+        card.style.display   = 'flex';
+    });
+
+    // ---- FILTRES SEMESTRE ----
     const tabBtns = document.querySelectorAll('.tab-btn');
     const cards   = document.querySelectorAll('.project-card');
 
-    // Au chargement : toutes les cartes visibles, sans classes reveal/hidden parasites
-    cards.forEach(card => {
-        card.classList.remove('reveal'); // on retire la classe reveal pour les project-cards
-        card.style.opacity    = '1';
-        card.style.transform  = 'none';
-        card.style.display    = 'flex';
-    });
-
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Mise à jour des boutons actifs
             tabBtns.forEach(b => {
                 b.classList.remove('active');
                 b.setAttribute('aria-selected', 'false');
@@ -60,15 +77,18 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.setAttribute('aria-selected', 'true');
 
             const filter = btn.dataset.filter;
+            let visibleIndex = 0;
 
-            cards.forEach((card, i) => {
+            cards.forEach(card => {
                 const match = filter === 'all' || card.dataset.semester === filter;
 
                 if (match) {
                     card.style.display = 'flex';
-                    card.style.transitionDelay = `${i * 40}ms`;
-                    // Forcer le reflow pour que la transition se déclenche bien
+                    const delay = visibleIndex * 60;
+                    visibleIndex++;
+                    // reflow avant la transition
                     void card.offsetWidth;
+                    card.style.transitionDelay = `${delay}ms`;
                     card.style.opacity   = '1';
                     card.style.transform = 'translateY(0) scale(1)';
                 } else {
@@ -81,22 +101,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
-    });
-
-    // ========== SCROLL REVEAL (hors project-cards) ==========
-    const revealObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el    = entry.target;
-                const delay = parseInt(el.dataset.delay || 0);
-                setTimeout(() => el.classList.add('revealed'), delay);
-                revealObserver.unobserve(el);
-            }
-        });
-    }, { threshold: 0.1 });
-
-    // On observe les éléments .reveal qui NE SONT PAS des project-cards
-    document.querySelectorAll('.reveal').forEach(el => {
-        revealObserver.observe(el);
     });
 });
