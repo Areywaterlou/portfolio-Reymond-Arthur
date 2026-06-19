@@ -126,7 +126,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal" data-semester="s2" onclick="openModal('modal6')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal6')">
+                <article class="project-card reveal" data-semester="s3" onclick="openModal('modal6')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal6')">
                     <div class="project-badge">S3</div>
                     <img src="assets/image/master_ball.png" alt="Aperçu Méga SAE">
                     <div class="project-content">
@@ -193,7 +193,7 @@
                     </div>
                 </article>
 
-                <article class="project-card reveal" data-semester="En cours" onclick="openModal('modal4')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal4')">
+                <article class="project-card reveal" data-semester="wip" onclick="openModal('modal4')" tabindex="0" onkeydown="if(event.key==='Enter')openModal('modal4')">
                     <div class="project-badge">En cours</div>
                     <img src="assets/image/livre.png.jpeg" alt="Aperçu Portfolio">
                     <div class="project-content">
@@ -426,6 +426,12 @@
         const tabBtns = document.querySelectorAll('.tab-btn');
         const cards   = document.querySelectorAll('.project-card');
 
+        // Initialiser toutes les cartes comme visibles au chargement
+        cards.forEach(card => {
+            card.style.display = 'flex';
+            card.classList.add('card-visible');
+        });
+
         tabBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 tabBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
@@ -438,17 +444,17 @@
                 cards.forEach(card => {
                     const match = filter === 'all' || card.dataset.semester === filter;
                     if (match) {
-                        card.style.transitionDelay = `${delay}ms`;
                         card.style.display = 'flex';
+                        card.style.transitionDelay = `${delay}ms`;
                         requestAnimationFrame(() => requestAnimationFrame(() => {
                             card.classList.remove('card-hidden');
                             card.classList.add('card-visible');
                         }));
-                        delay += 50;
+                        delay += 60;
                     } else {
                         card.style.transitionDelay = '0ms';
-                        card.classList.add('card-hidden');
                         card.classList.remove('card-visible');
+                        card.classList.add('card-hidden');
                         card.addEventListener('transitionend', () => {
                             if (card.classList.contains('card-hidden')) card.style.display = 'none';
                         }, { once: true });
