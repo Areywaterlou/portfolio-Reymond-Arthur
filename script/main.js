@@ -25,9 +25,11 @@ window.addEventListener('keydown', e => {
 });
 
 // ===== FILTRES =====
-document.addEventListener('DOMContentLoaded', () => {
+function initFilters() {
     const tabs  = document.querySelectorAll('.tab-btn');
     const cards = document.querySelectorAll('.project-card');
+
+    if (!tabs.length || !cards.length) return;
 
     // Toutes les cartes visibles au départ
     cards.forEach(c => { c.style.display = 'flex'; });
@@ -54,6 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initFilters();
 
     // ===== SCROLL REVEAL skill-cards (JS only, zéro CSS) =====
     document.querySelectorAll('.skill-main-card').forEach(el => {
