@@ -21,86 +21,118 @@
     </nav>
 
     <header id="accueil">
-        <div class="hero-content">
-            <p class="hero-eyebrow">Bonjour, je suis</p>
-            <h1 class="hero-name">Arthur Reymond</h1>
-            <p class="hero-title">Développeur web &amp; mobile · Disponible en alternance dès septembre 2026</p>
-            <div class="hero-actions">
-                <a href="assets/docs/CV institutionel  Arthur Reymond - type UGA.pdf" download="CV_Arthur_Reymond.pdf" class="btn-primary" aria-label="Télécharger le CV d'Arthur Reymond">
-                    <i class="material-icons">download</i>
-                    Télécharger mon CV
-                </a>
-                <a href="contact.html" class="btn-secondary">Me contacter</a>
-            </div>
-            <div class="alternance-strip" aria-label="Ce que j'apporte en alternance">
-                <div class="alternance-point">
-                    <i class="material-icons" aria-hidden="true">bolt</i>
-                    <h4>Opérationnel rapidement</h4>
-                    <p>Web, mobile et bases de données déjà pratiqués sur des projets livrés de bout en bout.</p>
+        <div class="hero-merged">
+            <img src="assets/image/portrait.jpeg" alt="Photo de profil d'Arthur Reymond" class="hero-photo">
+
+            <div class="hero-content">
+                <p class="hero-eyebrow">Bonjour, je suis</p>
+                <h1 class="hero-name">Arthur Reymond</h1>
+                <p class="hero-title">Développeur web &amp; mobile · Disponible en alternance dès septembre 2026</p>
+
+                <p class="hero-bio">
+                    Étudiant de 20 ans à l'IUT2 de Grenoble (BUT Informatique), passionné par le développement logiciel. Je construis des solutions concrètes à travers des projets ambitieux — curieux, rigoureux et à l'aise en équipe, je cherche constamment à repousser mes limites techniques et à créer des expériences utilisateur mémorables.
+                </p>
+
+                <ul class="hero-meta">
+                    <li><span class="meta-label">Institut</span> IUT2 Grenoble</li>
+                    <li><span class="meta-label">Langues</span> Français · Anglais · Espagnol</li>
+                    <li><span class="meta-label">Passions</span> Jeux vidéos · Lecture · F1 · Animés</li>
+                </ul>
+
+                <div class="hero-actions">
+                    <a href="assets/docs/CV institutionel  Arthur Reymond - type UGA.pdf" download="CV_Arthur_Reymond.pdf" class="btn-primary" aria-label="Télécharger le CV d'Arthur Reymond">
+                        <i class="material-icons">download</i>
+                        Télécharger mon CV
+                    </a>
+                    <a href="contact.html" class="btn-secondary">Me contacter</a>
                 </div>
-                <div class="alternance-point">
-                    <i class="material-icons" aria-hidden="true">groups</i>
-                    <h4>Autonomie en entreprise</h4>
-                    <p>Stage mené en solo : cadrage client, développement et livraison sans supervision continue.</p>
-                </div>
-                <div class="alternance-point">
-                    <i class="material-icons" aria-hidden="true">event_available</i>
-                    <h4>Rythme flexible</h4>
-                    <p>Disponible pour un rythme d'alternance à définir avec l'entreprise, à partir de septembre 2026.</p>
+
+                <div class="alternance-strip" aria-label="Ce que j'apporte en alternance">
+                    <div class="alternance-point">
+                        <i class="material-icons" aria-hidden="true">bolt</i>
+                        <h4>Opérationnel rapidement</h4>
+                        <p>Web, mobile et bases de données déjà pratiqués sur des projets livrés de bout en bout.</p>
+                    </div>
+                    <div class="alternance-point">
+                        <i class="material-icons" aria-hidden="true">groups</i>
+                        <h4>Autonomie en entreprise</h4>
+                        <p>Stage et contrat menés en autonomie : cadrage client, développement et livraison.</p>
+                    </div>
+                    <div class="alternance-point">
+                        <i class="material-icons" aria-hidden="true">event_available</i>
+                        <h4>Rythme flexible</h4>
+                        <p>Disponible pour un rythme d'alternance à définir avec l'entreprise, à partir de septembre 2026.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="hero-badge">AR</div>
     </header>
 
     <main>
-        <section id="presentation" aria-labelledby="title-apropos">
-            <h2 class="section-title" id="title-apropos">À propos de moi</h2>
-            <div class="profile-card">
-                <img src="assets/image/portrait.jpeg" alt="Photo de profil d'Arthur Reymond" class="profile-photo">
-                <div class="profile-right">
-                    <h3>Arthur Reymond</h3>
-                    <ul class="profile-meta">
-                        <li><span class="meta-label">Âge</span> 20 ans</li>
-                        <li><span class="meta-label">Spécialité</span> Programmation · Web · Java</li>
-                        <li><span class="meta-label">Passions</span> Jeux vidéos · Lecture · F1 · Animés</li>
-                        <li><span class="meta-label">Institut</span> IUT2 Grenoble</li>
-                        <li><span class="meta-label">Langues</span> Français · Anglais · Espagnol</li>
-                    </ul>
-                    <p class="profile-bio">
-                        Passionné par le développement logiciel, je construis des solutions concrètes à travers des projets ambitieux. Curieux, rigoureux et à l'aise en équipe, je cherche constamment à repousser mes limites techniques et à créer des expériences utilisateur mémorables.
-                    </p>
-                </div>
-            </div>
-        </section>
-
         <section id="parcours" aria-labelledby="title-parcours">
             <h2 class="section-title" id="title-parcours">Mon Parcours</h2>
-            <div class="timeline">
 
-                <article class="timeline-item">
-                    <div class="timeline-date">2024 – Présent</div>
-                    <h3>BUT Informatique – Réalisation d'applications</h3>
-                    <p>IUT2 de Grenoble · Programmation, Web & Systèmes</p>
-                </article>
+            <div class="parcours-columns">
 
-                <article class="timeline-item">
-                    <div class="timeline-date">Été 2025</div>
-                    <h3>Agent de Drive – E.Leclerc</h3>
-                    <p>Livraisons, préparation de commandes et organisation logistique</p>
-                </article>
+                <div class="parcours-group">
+                    <h3 class="parcours-group-title">
+                        <i class="material-icons" aria-hidden="true">terminal</i>
+                        Parcours informatique
+                    </h3>
+                    <div class="timeline">
 
-                <article class="timeline-item">
-                    <div class="timeline-date">Été 2024 – 2025</div>
-                    <h3>Agent d'entretien & d'accueil – SMVIC</h3>
-                    <p>Utilisation de machines, expérience polyvalente sur plusieurs postes</p>
-                </article>
+                        <article class="timeline-item">
+                            <div class="timeline-date">2024 – Présent</div>
+                            <h4>BUT Informatique – Réalisation d'applications</h4>
+                            <p>IUT2 de Grenoble · Programmation, Web &amp; Systèmes</p>
+                        </article>
 
-                <article class="timeline-item">
-                    <div class="timeline-date">2021 – 2024</div>
-                    <h3>Baccalauréat Général – Mention Assez Bien</h3>
-                    <p>Lycée La Saulaie · Spécialités Mathématiques & Physique (+ Maths Expertes)</p>
-                </article>
+                        <article class="timeline-item">
+                            <div class="timeline-date">2026 · En cours</div>
+                            <h4>Contrat – Mise à jour du site de la Mairie de Chatte</h4>
+                            <p>Refonte de contenu et restructuration du site institutionnel de la commune.
+                                <a href="https://www.commune-chatte.fr" target="_blank" rel="noopener noreferrer" class="timeline-link">
+                                    Voir le site <i class="material-icons" aria-hidden="true">north_east</i>
+                                </a>
+                            </p>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-date">2026 · Terminé</div>
+                            <h4>Stage – Développeur WordPress (club sportif)</h4>
+                            <p>Refonte de site et automatisation du processus d'inscription en ligne</p>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="parcours-group">
+                    <h3 class="parcours-group-title">
+                        <i class="material-icons" aria-hidden="true">work_outline</i>
+                        Parcours général &amp; hors informatique
+                    </h3>
+                    <div class="timeline">
+
+                        <article class="timeline-item">
+                            <div class="timeline-date">Été 2025</div>
+                            <h4>Agent de Drive – E.Leclerc</h4>
+                            <p>Livraisons, préparation de commandes et organisation logistique</p>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-date">Été 2024 – 2025</div>
+                            <h4>Agent d'entretien &amp; d'accueil – SMVIC</h4>
+                            <p>Utilisation de machines, expérience polyvalente sur plusieurs postes</p>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-date">2021 – 2024</div>
+                            <h4>Baccalauréat Général – Mention Assez Bien</h4>
+                            <p>Lycée La Saulaie · Spécialités Mathématiques &amp; Physique (+ Maths Expertes)</p>
+                        </article>
+
+                    </div>
+                </div>
 
             </div>
         </section>

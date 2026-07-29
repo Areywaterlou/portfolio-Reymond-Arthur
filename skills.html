@@ -217,12 +217,23 @@
                     </div>
                 </article>
 
-                <article class="project-card project-card--wip reveal" data-domain="web wip" data-modal="modal12" tabindex="0">
-                    <div class="project-badge project-badge--wip">En cours</div>
+                <article class="project-card reveal" data-domain="web" data-modal="modal12" tabindex="0">
+                    <div class="project-badge">Terminé</div>
                     <img src="assets/image/wordpress.png" alt="Aperçu du stage développeur WordPress" onerror="this.src='assets/image/ordinateur.jpg'">
                     <div class="project-content">
                         <h3>Stage — Développement WordPress (club sportif)</h3>
                         <p>Refonte de site client et automatisation du processus d'inscription.</p>
+                        <div class="project-tags"><span>WordPress</span><span>HTML</span><span>CSS</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card project-card--wip reveal" data-domain="web wip" data-modal="modal13" tabindex="0">
+                    <div class="project-badge project-badge--wip">En cours</div>
+                    <img src="assets/image/wordpress.png" alt="Aperçu du contrat avec la Mairie de Chatte" onerror="this.src='assets/image/ordinateur.jpg'">
+                    <div class="project-content">
+                        <h3>Contrat — Site web de la Mairie de Chatte</h3>
+                        <p>Mise à jour et restructuration du site institutionnel de la commune.</p>
                         <div class="project-tags"><span>WordPress</span><span>HTML</span><span>CSS</span></div>
                         <span class="view-more">En savoir plus →</span>
                     </div>
@@ -389,15 +400,35 @@
             <div class="modal-content">
                 <button class="close" data-close aria-label="Fermer">&times;</button>
                 <img src="assets/image/wordpress.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
-                <div class="modal-meta"><span class="modal-badge-sm modal-badge-sm--wip">En cours</span><span class="modal-tag">WordPress</span><span class="modal-tag">HTML</span><span class="modal-tag">CSS</span><span class="modal-tag">Gestion de projet</span></div>
+                <div class="modal-meta"><span class="modal-badge-sm">Terminé</span><span class="modal-tag">WordPress</span><span class="modal-tag">HTML</span><span class="modal-tag">CSS</span><span class="modal-tag">Gestion de projet</span></div>
                 <h3 id="modal12-title">Stage — Développement WordPress (club sportif)</h3>
-                <p>Stage en cours axé sur le développement web WordPress : conception, refonte et maintenance d'un site client, développement de fonctionnalités sur mesure, optimisation des performances et de l'accessibilité.</p>
+                <p>Stage réalisé au sein d'un club sportif, axé sur le développement web WordPress : conception, refonte et maintenance du site, développement de fonctionnalités sur mesure, optimisation des performances et de l'accessibilité.</p>
                 <ul class="modal-extras">
                     <li>Cadrage du besoin et du budget avec le client</li>
                     <li>Développement orienté SEO et performance</li>
                     <li>Intégration de maquettes et adaptation responsive</li>
-                    <li>Itérations selon les retours utilisateurs</li>
+                    <li>Automatisation du processus d'inscription en ligne</li>
                 </ul>
+            </div>
+        </div>
+
+        <div id="modal13" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal13-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/wordpress.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm modal-badge-sm--wip">En cours</span><span class="modal-tag">WordPress</span><span class="modal-tag">HTML</span><span class="modal-tag">CSS</span></div>
+                <h3 id="modal13-title">Contrat — Site web de la Mairie de Chatte</h3>
+                <p>Mission en cours pour la commune de Chatte : mise à jour des contenus, remplissage des rubriques et restructuration générale du site institutionnel afin d'en améliorer la lisibilité et la navigation pour les administrés.</p>
+                <ul class="modal-extras">
+                    <li>Audit du site existant et priorisation des contenus à mettre à jour</li>
+                    <li>Réorganisation des rubriques et de la navigation</li>
+                    <li>Mise à jour éditoriale en lien avec les services de la mairie</li>
+                </ul>
+                <div class="modal-link-wrapper">
+                    <a href="https://www.commune-chatte.fr" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Voir le site officiel
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -451,14 +482,9 @@
             }
         });
 
-        // ========== FILTRES PAR DOMAINE ==========
+        // ========== FILTRES PAR DOMAINE (réécriture robuste et instantanée) ==========
         const tabBtns = document.querySelectorAll('.tab-btn');
         const cards   = document.querySelectorAll('.project-card');
-
-        cards.forEach(card => {
-            card.style.display = 'flex';
-            card.classList.add('card-visible');
-        });
 
         function applyFilter(filter) {
             tabBtns.forEach(b => {
@@ -467,25 +493,21 @@
                 b.setAttribute('aria-selected', String(active));
             });
 
-            let delay = 0;
+            let visibleIndex = 0;
             cards.forEach(card => {
                 const domains = (card.dataset.domain || '').split(' ');
                 const match = filter === 'all' || domains.includes(filter);
+
                 if (match) {
-                    card.style.display = 'flex';
-                    card.style.transitionDelay = `${delay}ms`;
-                    requestAnimationFrame(() => requestAnimationFrame(() => {
-                        card.classList.remove('card-hidden');
-                        card.classList.add('card-visible');
-                    }));
-                    delay += 60;
+                    card.hidden = false;
+                    card.style.setProperty('--stagger', `${visibleIndex * 45}ms`);
+                    // Redémarre l'animation même si la carte était déjà visible
+                    card.classList.remove('card-pop');
+                    void card.offsetWidth; // force le reflow pour relancer le keyframe
+                    card.classList.add('card-pop');
+                    visibleIndex++;
                 } else {
-                    card.style.transitionDelay = '0ms';
-                    card.classList.remove('card-visible');
-                    card.classList.add('card-hidden');
-                    card.addEventListener('transitionend', () => {
-                        if (card.classList.contains('card-hidden')) card.style.display = 'none';
-                    }, { once: true });
+                    card.hidden = true;
                 }
             });
         }
