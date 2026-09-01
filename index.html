@@ -3,65 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio d'Arthur Reymond – Étudiant en BUT Informatique, développeur web et logiciel.">
+    <meta name="description" content="Portfolio d'Arthur Reymond – Étudiant en BUT Informatique à Grenoble, développeur web et mobile en recherche d'alternance dès que possible.">
     <link rel="icon" type="image/png" href="assets/icons/flaviconAR.png">
-    <title>Portfolio – Arthur Reymond</title>
+    <title>Arthur Reymond – Développeur Web & Mobile · Recherche d'alternance</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navigation" aria-label="Navigation principale">
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">À propos</a></li>
-            <li><a href="skills.html">Compétences</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <header class="header-floating">
+        <nav class="navbar-floating">
+            <a href="#accueil" class="nav-brand">
+                <div class="nav-avatar">AR</div>
+                <span class="nav-name">Arthur <span>Reymond</span></span>
+            </a>
 
+            <ul class="nav-links">
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-btn-contact">Me contacter</a>
+        </nav>
+    </header>
+
+    <!-- ===================================================== -->
+    <!-- BLOC UNIQUE : ACCUEIL & COMPÉTENCES                   -->
+    <!-- ===================================================== -->
     <header id="accueil">
         <div class="hero-merged">
             <img src="assets/image/portrait.jpeg" alt="Photo de profil d'Arthur Reymond" class="hero-photo">
 
             <div class="hero-content">
+                <!-- 1. PRÉSENTATION-->
+                <span class="status-badge">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Disponible pour alternance dès que possible !
+                </span>
+
                 <p class="hero-eyebrow">Bonjour, je suis</p>
                 <h1 class="hero-name">Arthur Reymond</h1>
-                <p class="hero-title">Développeur web &amp; mobile · Disponible en alternance dès septembre 2026</p>
+                <p class="hero-title">Développeur web &amp; mobile · Rythme BUT3</p>
 
                 <p class="hero-bio">
-                    Étudiant de 20 ans à l'IUT2 de Grenoble (BUT Informatique), passionné par le développement logiciel. Je construis des solutions concrètes à travers des projets ambitieux — curieux, rigoureux et à l'aise en équipe, je cherche constamment à repousser mes limites techniques et à créer des expériences utilisateur mémorables.
+                    Étudiant en 2<sup>e</sup> année de BUT Informatique à l'IUT2 de Grenoble. Je conçois des applications web, mobiles et de gestion de données à travers des projets académiques et des missions réelles en entreprise mais aussi quelques projets personnels.
                 </p>
 
                 <ul class="hero-meta">
-                    <li><span class="meta-label">Institut</span> IUT2 Grenoble</li>
-                    <li><span class="meta-label">Langues</span> Français · Anglais · Espagnol</li>
-                    <li><span class="meta-label">Passions</span> Jeux vidéos · Lecture · F1 · Animés</li>
+                    <li><span class="meta-label">Formation</span> IUT2 de Grenoble (UGA)</li>
+                    <li><span class="meta-label">Langues</span> Français (langue maternelle) · Anglais (B2)</li>
+                    <li><span class="meta-label">Centres d'intérêt</span> Simracing/F1 · Développement logiciel · Tech</li>
                 </ul>
 
                 <div class="hero-actions">
-                    <a href="assets/docs/CV institutionel  Arthur Reymond - type UGA.pdf" download="CV_Arthur_Reymond.pdf" class="btn-primary" aria-label="Télécharger le CV d'Arthur Reymond">
-                        <i class="material-icons">download</i>
+                    <a href="assets/docs/CV_Arthur_Reymond.pdf" download="CV_Arthur_Reymond.pdf" class="btn-primary" aria-label="Télécharger le CV d'Arthur Reymond">
+                        <i class="material-icons" aria-hidden="true">download</i>
                         Télécharger mon CV
                     </a>
-                    <a href="contact.html" class="btn-secondary">Me contacter</a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="material-icons" aria-hidden="true">mail</i>
+                        Recruter en alternance
+                    </a>
                 </div>
 
-                <div class="alternance-strip" aria-label="Ce que j'apporte en alternance">
+                <div class="alternance-strip" aria-label="Points clés pour l'alternance">
                     <div class="alternance-point">
-                        <i class="material-icons" aria-hidden="true">bolt</i>
-                        <h4>Opérationnel rapidement</h4>
-                        <p>Web, mobile et bases de données déjà pratiqués sur des projets livrés de bout en bout.</p>
+                        <i class="material-icons" aria-hidden="true">school</i>
+                        <h4>BUT2 Informatique</h4>
+                        <p>Parcours Réalisation d'applications (IUT2 Grenoble)</p>
                     </div>
                     <div class="alternance-point">
-                        <i class="material-icons" aria-hidden="true">groups</i>
-                        <h4>Autonomie en entreprise</h4>
-                        <p>Stage et contrat menés en autonomie : cadrage client, développement et livraison.</p>
+                        <i class="material-icons" aria-hidden="true">work</i>
+                        <h4>2 Projets Clients Livrés</h4>
+                        <p>Refonte web institutionnelle &amp; module d'inscription</p>
                     </div>
                     <div class="alternance-point">
                         <i class="material-icons" aria-hidden="true">event_available</i>
-                        <h4>Rythme flexible</h4>
-                        <p>Disponible pour un rythme d'alternance à définir avec l'entreprise, à partir de septembre 2026.</p>
+                        <h4>Alternance</h4>
+                        <p>Rythme BUT3 sur l'année universitaire 2026-2027</p>
+                    </div>
+                </div>
+
+                <!-- 2. COMPÉTENCES (Fusionnées dans le même bloc) -->
+                <!-- J'ai ajouté une div englobante pour aérer et titrer cette sous-partie -->
+                <div class="hero-skills" style="margin-top: 3rem;" aria-labelledby="title-competences">
+                    <h2 class="section-title" id="title-competences" style="font-size: 1.5rem; text-align: left; margin-bottom: 1.5rem;">Mes Compétences</h2>
+                    
+                    <div class="skills-grid-large">
+                        <div class="skill-main-card reveal">
+                            <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">terminal</i></div>
+                            <div class="skill-info">
+                                <h3>Développement Web &amp; Logiciel</h3>
+                                <div class="skill-list-complex">
+                                    <button type="button" class="item" data-tech="java">Java</button>
+                                    <button type="button" class="item" data-tech="javascript">JavaScript</button>
+                                    <button type="button" class="item" data-tech="php">PHP</button>
+                                    <button type="button" class="item" data-tech="html">HTML5 / CSS3</button>
+                                    <button type="button" class="item" data-tech="c++">C / C++</button>
+                                    <button type="button" class="item" data-tech="symfony">Symfony</button>
+                                    <button type="button" class="item" data-tech="javafx">JavaFX</button>
+                                    <button type="button" class="item" data-tech="android">Java Android</button>
+                                    <button type="button" class="item" data-tech="wordpress">WordPress</button>
+                                </div>
+                                <p class="skill-hint">Cliquez sur une technologie pour voir les projets associés.</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-main-card reveal" data-delay="120">
+                            <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">settings_ethernet</i></div>
+                            <div class="skill-info">
+                                <h3>Systèmes &amp; Données</h3>
+                                <div class="skill-list-complex">
+                                    <button type="button" class="item" data-tech="linux">Linux</button>
+                                    <button type="button" class="item" data-tech="sql">SQL / PostgreSQL</button>
+                                    <button type="button" class="item" data-tech="sqlite">SQLite</button>
+                                    <button type="button" class="item" data-tech="r">R (statistiques)</button>
+                                    <button type="button" class="item" data-tech="docker">Docker</button>
+                                    <button type="button" class="item" data-tech="supabase">Supabase</button>
+                                </div>
+                                <p class="skill-hint">Cliquez sur une technologie pour voir les projets associés.</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-main-card reveal" data-delay="240">
+                            <div class="skill-icon-box" aria-hidden="true"><i class="material-icons">architecture</i></div>
+                            <div class="skill-info">
+                                <h3>Conception &amp; Qualité Logicielle</h3>
+                                <div class="skill-list-complex">
+                                    <button type="button" class="item" data-tech="uml">UML</button>
+                                    <button type="button" class="item" data-tech="bpmn">BPMN</button>
+                                    <button type="button" class="item" data-tech="agile">Méthodes Agiles</button>
+                                    <button type="button" class="item" data-tech="mvc">IHM / UX</button>
+                                    <button type="button" class="item" data-tech="test">Tests unitaires (JUnit)</button>
+                                    <button type="button" class="item" data-tech="docker">DevOps</button>
+                                </div>
+                                <p class="skill-hint">Cliquez sur une technologie pour voir les projets associés.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,11 +152,16 @@
     </header>
 
     <main>
+
+        <!-- ===================================================== -->
+        <!-- PARCOURS                                              -->
+        <!-- ===================================================== -->
         <section id="parcours" aria-labelledby="title-parcours">
             <h2 class="section-title" id="title-parcours">Mon Parcours</h2>
 
             <div class="parcours-columns">
 
+                <!-- Informatique -->
                 <div class="parcours-group">
                     <h3 class="parcours-group-title">
                         <i class="material-icons" aria-hidden="true">terminal</i>
@@ -82,53 +170,108 @@
                     <div class="timeline">
 
                         <article class="timeline-item">
-                            <div class="timeline-date">2024 – Présent</div>
-                            <h4>BUT Informatique – Réalisation d'applications</h4>
-                            <p>IUT2 de Grenoble · Programmation, Web &amp; Systèmes</p>
+                            <div class="timeline-card">
+                                <span class="timeline-date">2024 – Présent</span>
+                                <h4>BUT Informatique – Parcours Réalisation d'applications</h4>
+                                <p>IUT2 de Grenoble · Architecture logicielle, bases de données, POO Java, Symfony et développement web.</p>
+                                <div class="timeline-tags">
+                                    <span>Java</span>
+                                    <span>Symfony</span>
+                                    <span>SQL</span>
+                                    <span>POO</span>
+                                </div>
+                            </div>
                         </article>
 
                         <article class="timeline-item">
-                            <div class="timeline-date">2026 · En cours</div>
-                            <h4>Contrat – Mise à jour du site de la Mairie de Chatte</h4>
-                            <p>Refonte de contenu et restructuration du site institutionnel de la commune.
+                            <div class="timeline-card">
+                                <span class="timeline-date">2026 · Terminé</span>
+                                <h4>Mission Client — Refonte du site de la Mairie de Chatte</h4>
+                                <p>Audit ergonomique, restructuration de l'architecture d'information et mise à jour des contenus sur CMS « maison ».</p>
                                 <a href="https://www.commune-chatte.fr" target="_blank" rel="noopener noreferrer" class="timeline-link">
                                     Voir le site <i class="material-icons" aria-hidden="true">north_east</i>
                                 </a>
-                            </p>
+                                <div class="timeline-tags">
+                                    <span>Audit UX</span>
+                                    <span>CMS</span>
+                                    <span>Architecture Web</span>
+                                </div>
+                            </div>
                         </article>
 
                         <article class="timeline-item">
-                            <div class="timeline-date">2026 · Terminé</div>
-                            <h4>Stage – Développeur WordPress (club sportif)</h4>
-                            <p>Refonte de site et automatisation du processus d'inscription en ligne</p>
+                            <div class="timeline-card">
+                                <span class="timeline-date">2026 · Terminé</span>
+                                <h4>Stage — Développeur Web (Club sportif)</h4>
+                                <p>Refonte visuelle sous WordPress et automatisation du système d'inscription en ligne pour optimiser le parcours adhérent.</p>
+                                <div class="timeline-tags">
+                                    <span>WordPress</span>
+                                    <span>PHP</span>
+                                    <span>Automatisation</span>
+                                </div>
+                            </div>
                         </article>
 
                     </div>
                 </div>
 
+                <!-- Expériences complémentaires -->
                 <div class="parcours-group">
                     <h3 class="parcours-group-title">
                         <i class="material-icons" aria-hidden="true">work_outline</i>
-                        Parcours général &amp; hors informatique
+                        Expériences complémentaires
                     </h3>
                     <div class="timeline">
 
                         <article class="timeline-item">
-                            <div class="timeline-date">Été 2025</div>
-                            <h4>Agent de Drive – E.Leclerc</h4>
-                            <p>Livraisons, préparation de commandes et organisation logistique</p>
+                            <div class="timeline-card">
+                                <span class="timeline-date">Été 2026</span>
+                                <h4>Agent de production (Intérim) — Usine CELTA</h4>
+                                <p>Travail en horaires d'équipe, gestion de l'efficacité opérationnelle et respect des cadences de production.</p>
+                                <div class="timeline-tags">
+                                    <span>Travail en équipe</span>
+                                    <span>Rigueur</span>
+                                    <span>Cadence</span>
+                                </div>
+                            </div>
                         </article>
 
                         <article class="timeline-item">
-                            <div class="timeline-date">Été 2024 – 2025</div>
-                            <h4>Agent d'entretien &amp; d'accueil – SMVIC</h4>
-                            <p>Utilisation de machines, expérience polyvalente sur plusieurs postes</p>
+                            <div class="timeline-card">
+                                <span class="timeline-date">Été 2025</span>
+                                <h4>Agent de Drive – E.Leclerc</h4>
+                                <p>Gestion logistique des stocks, préparation des commandes et travail en flux tendu sous contraintes horaires.</p>
+                                <div class="timeline-tags">
+                                    <span>Logistique</span>
+                                    <span>Flux tendu</span>
+                                    <span>Autonomie</span>
+                                </div>
+                            </div>
                         </article>
 
                         <article class="timeline-item">
-                            <div class="timeline-date">2021 – 2024</div>
-                            <h4>Baccalauréat Général – Mention Assez Bien</h4>
-                            <p>Lycée La Saulaie · Spécialités Mathématiques &amp; Physique (+ Maths Expertes)</p>
+                            <div class="timeline-card">
+                                <span class="timeline-date">Été 2024 – 2025</span>
+                                <h4>Agent d'entretien &amp; d'accueil – SMVIC</h4>
+                                <p>Accueil des usagers, gestion des installations et polyvalence opérationnelle sur le terrain.</p>
+                                <div class="timeline-tags">
+                                    <span>Accueil</span>
+                                    <span>Relation client</span>
+                                    <span>Polyvalence</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="timeline-item">
+                            <div class="timeline-card">
+                                <span class="timeline-date">2021 – 2024</span>
+                                <h4>Baccalauréat Général (Mention AB)</h4>
+                                <p>Lycée La Saulaie · Spécialités Mathématiques, Physique-Chimie &amp; Maths Expertes.</p>
+                                <div class="timeline-tags">
+                                    <span>Mathématiques</span>
+                                    <span>Physique-Chimie</span>
+                                </div>
+                            </div>
                         </article>
 
                     </div>
@@ -136,13 +279,643 @@
 
             </div>
         </section>
+
+        <!-- ===================================================== -->
+        <!-- PROJETS                                                -->
+        <!-- ===================================================== -->
+        <section id="projets" aria-labelledby="title-projets">
+            <h2 class="section-title" id="title-projets">Mes Projets</h2>
+
+            <div class="semester-tabs" role="tablist" aria-label="Filtrer par domaine">
+                <button class="tab-btn active" role="tab" aria-selected="true"  data-filter="all">Tous</button>
+                <button class="tab-btn"         role="tab" aria-selected="false" data-filter="web">Web</button>
+                <button class="tab-btn"         role="tab" aria-selected="false" data-filter="mobile">Mobile</button>
+                <button class="tab-btn"         role="tab" aria-selected="false" data-filter="donnees">Données</button>
+                <button class="tab-btn"         role="tab" aria-selected="false" data-filter="applications">Applications</button>
+                <button class="tab-btn tab-btn--wip" role="tab" aria-selected="false" data-filter="wip">En cours</button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid">
+
+                <article class="project-card reveal" data-domain="applications" data-modal="modal1" tabindex="0">
+                    <div class="project-badge">Java</div>
+                    <img src="assets/image/journal.jpg" alt="Optimisation d'algorithmes de tri">
+                    <div class="project-content">
+                        <h3>Optimisation d'algorithmes de tri</h3>
+                        <p>Traitement algorithmique et analyse de performance sur volumes textuels.</p>
+                        <div class="project-tags"><span>Java</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="web" data-modal="modal2" tabindex="0">
+                    <div class="project-badge">Web</div>
+                    <img src="assets/image/ordinateur.jpg" alt="Site vitrine Econocom">
+                    <div class="project-content">
+                        <h3>Site vitrine — Econocom</h3>
+                        <p>Projet d'intégration responsive axé sur le parcours candidat et l'ergonomie.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="donnees" data-modal="modal3" tabindex="0">
+                    <div class="project-badge">Données</div>
+                    <img src="assets/image/base_de_donnee.jpg" alt="Analyse de données routières">
+                    <div class="project-content">
+                        <h3>Analyse de données routières — Région PACA</h3>
+                        <p>Nettoyage de jeux de données réels et modélisation statistique.</p>
+                        <div class="project-tags"><span>R</span><span>SQL</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="applications" data-modal="modal5" tabindex="0">
+                    <div class="project-badge">Java</div>
+                    <img src="assets/image/carte_faerun.webp" alt="RPG tactique">
+                    <div class="project-content">
+                        <h3>RPG tactique — Univers de Faërun</h3>
+                        <p>Jeu de stratégie au tour par tour conçu avec une architecture orientée objet.</p>
+                        <div class="project-tags"><span>Java</span><span>JavaFX</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="applications" data-modal="modal6" tabindex="0">
+                    <div class="project-badge">Java</div>
+                    <img src="assets/image/master_ball.png" alt="Gestion d'événements">
+                    <div class="project-content">
+                        <h3>Application de gestion d'événements</h3>
+                        <p>Application lourde MVC avec IHM interactive et couverture de tests unitaires.</p>
+                        <div class="project-tags"><span>Java</span><span>JavaFX</span><span>Graphes</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="web donnees" data-modal="modal7" tabindex="0">
+                    <div class="project-badge">Web</div>
+                    <img src="assets/image/chronia.png" alt="Plateforme Chronia">
+                    <div class="project-content">
+                        <h3>Plateforme d'aide à domicile — Chronia</h3>
+                        <p>Agenda partagé, chatbot PHP et messagerie déployés sur serveur VPS.</p>
+                        <div class="project-tags"><span>PHP</span><span>JS</span><span>SQL</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="web" data-modal="modal8" tabindex="0">
+                    <div class="project-badge">Web</div>
+                    <img src="assets/image/crypto-tracker.png" alt="Suivi de cryptomonnaies" onerror="this.src='assets/image/ordinateur.jpg'">
+                    <div class="project-content">
+                        <h3>Suivi de cryptomonnaies temps réel</h3>
+                        <p>App JavaScript MVC consommant l'API REST CoinGecko avec persistance des données.</p>
+                        <div class="project-tags"><span>JS</span><span>API REST</span><span>MVC</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="web" data-modal="modal9" tabindex="0">
+                    <div class="project-badge">Web</div>
+                    <img src="assets/image/boutique.png" alt="Boutique Symfony" onerror="this.src='assets/image/ordinateur.jpg'">
+                    <div class="project-content">
+                        <h3>Boutique en ligne — Symfony</h3>
+                        <p>Plateforme e-commerce full-stack (ORM Doctrine, sécurité, panier, Docker).</p>
+                        <div class="project-tags"><span>Symfony</span><span>PHP</span><span>Docker</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="mobile donnees" data-modal="modal10" tabindex="0">
+                    <div class="project-badge">Mobile</div>
+                    <img src="assets/image/ecole_loustics.png" alt="L'École des Loustics" onerror="this.src='assets/image/base_de_donnee.jpg'">
+                    <div class="project-content">
+                        <h3>Application Android — L'École des Loustics</h3>
+                        <p>Refactoring global et normalisation d'une base de données locale sous Room DB.</p>
+                        <div class="project-tags"><span>Java Android</span><span>Room DB</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="web" data-modal="modal11" tabindex="0">
+                    <div class="project-badge">Web</div>
+                    <img src="assets/image/anniv.png" alt="Gestion d'invitations Supabase" onerror="this.src='assets/image/fond_bleu.jpg'">
+                    <div class="project-content">
+                        <h3>Gestion d'invitations temps réel</h3>
+                        <p>Web app JavaScript Vanilla avec backend Supabase (PostgreSQL Cloud).</p>
+                        <div class="project-tags"><span>JS</span><span>Supabase</span><span>MVC</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="web wip" data-modal="modal4" tabindex="0">
+                    <div class="project-badge">En cours</div>
+                    <img src="assets/image/livre.png.jpeg" alt="Portfolio personnel">
+                    <div class="project-content">
+                        <h3>Portfolio personnel</h3>
+                        <p>Site dynamique conçu avec modales accessibles et filtres interactifs.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="web" data-modal="modal12" tabindex="0">
+                    <div class="project-badge">Terminé</div>
+                    <img src="assets/image/wordpress.png" alt="Stage WordPress" onerror="this.src='assets/image/ordinateur.jpg'">
+                    <div class="project-content">
+                        <h3>Stage — Développeur Web (Club sportif)</h3>
+                        <p>Refonte du site et automatisation des workflows d'inscription en ligne.</p>
+                        <div class="project-tags"><span>WordPress</span><span>PHP</span><span>CSS</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="web" data-modal="modal13" tabindex="0">
+                    <div class="project-badge">Terminé</div>
+                    <img src="assets/image/wordpress.png" alt="Site Mairie de Chatte" onerror="this.src='assets/image/ordinateur.jpg'">
+                    <div class="project-content">
+                        <h3>Mission — Site de la Mairie de Chatte</h3>
+                        <p>Restructuration de l'arborescence et mise en conformité des contenus web.</p>
+                        <div class="project-tags"><span>WordPress</span><span>HTML</span><span>CSS</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ===================================================== -->
+        <!-- MODALES PROJETS                                        -->
+        <!-- ===================================================== -->
+
+        <div id="modal1" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal1-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/journal.jpg" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">Applications</span><span class="modal-tag">Java</span></div>
+                <h3 id="modal1-title">Optimisation d'algorithmes de tri</h3>
+                <p>Développement en Java d'algorithmes d'analyse et de classement textuel. Analyse de la complexité temporelle et spatiale pour optimiser l'exécution sur de gros volumes de données.</p>
+            </div>
+        </div>
+
+        <div id="modal2" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal2-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/ordinateur.jpg" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">Web</span><span class="modal-tag">HTML</span><span class="modal-tag">CSS</span></div>
+                <h3 id="modal2-title">Site vitrine — Econocom</h3>
+                <p>Création d'une interface web responsive orientée recrutement. Respect strict de la charte graphique et travail soutenu sur l'ergonomie et l'accessibilité.</p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal3-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/base_de_donnee.jpg" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">Données</span><span class="modal-tag">R</span><span class="modal-tag">SQL</span></div>
+                <h3 id="modal3-title">Analyse de données routières — Région PACA</h3>
+                <p>Nettoyage complet, requêtes SQL complexes et statistiques descriptives avec R sur un dataset d'accidents routiers réels pour en extraire des recommandations d'aménagement.</p>
+            </div>
+        </div>
+
+        <div id="modal4" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal4-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/livre.png.jpeg" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">Web</span><span class="modal-tag">HTML</span><span class="modal-tag">CSS</span><span class="modal-tag">JS</span></div>
+                <h3 id="modal4-title">Portfolio personnel</h3>
+                <p>Conception et intégration de ce portfolio interactif sans framework JS lourd : filtres dynamiques, modales accessibles et design adapté à la recherche d'alternance.</p>
+                <div class="modal-link-wrapper">
+                    <a href="#accueil" class="project-link">
+                        <i class="material-icons">launch</i>Voir le site
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal5" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal5-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/carte_faerun.webp" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">Applications</span><span class="modal-tag">Java</span><span class="modal-tag">JavaFX</span></div>
+                <h3 id="modal5-title">RPG tactique — Univers de Faërun</h3>
+                <p>Implémentation d'un jeu de rôle tactique en Java/JavaFX. Architecture orientée objet solide (gestion des tours, statistiques des unités, grille de combat et règles d'affrontement).</p>
+            </div>
+        </div>
+
+        <div id="modal6" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal6-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/master_ball.png" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">Applications</span><span class="modal-tag">Java</span><span class="modal-tag">JavaFX</span></div>
+                <h3 id="modal6-title">Application de gestion d'événements</h3>
+                <p>Développement d'une application de bureau selon le pattern MVC. Gestion de plannings complexes, modélisation par graphes et validation de la logique métier par des tests unitaires JUnit.</p>
+            </div>
+        </div>
+
+        <div id="modal7" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal7-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/chronia.png" alt="">
+                <div class="modal-meta"><span class="modal-badge-sm">Web</span><span class="modal-tag">PHP</span><span class="modal-tag">JS</span><span class="modal-tag">SQL</span></div>
+                <h3 id="modal7-title">Plateforme Full-Stack — Chronia</h3>
+                <p>Plateforme web dédiée au maintien à domicile : agenda collaboratif synchronisé, chatbot en PHP et messagerie interne. Déploiement et configuration réalisés sur un VPS Linux OVH.</p>
+                <div class="modal-link-wrapper">
+                    <a href="http://vps-e885b886.vps.ovh.net/chronia/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Tester la démo VPS
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal8" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal8-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/crypto-tracker.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">Web</span><span class="modal-tag">JavaScript</span><span class="modal-tag">API REST</span></div>
+                <h3 id="modal8-title">Suivi de cryptomonnaies en temps réel</h3>
+                <p>Dashboard de consultation financière consommant l'API CoinGecko via des requêtes asynchrones Fetch. Persistance du portefeuille de favoris via le LocalStorage et architecture MVC modulable.</p>
+                <div class="modal-link-wrapper">
+                    <a href="https://areywaterlou.github.io/r4a10-tp-api-2026-reymonar-seranoa/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Voir la démo en ligne
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal9" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal9-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/boutique.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">Web</span><span class="modal-tag">Symfony</span><span class="modal-tag">PHP</span><span class="modal-tag">Docker</span></div>
+                <h3 id="modal9-title">Plateforme E-commerce — Symfony 7</h3>
+                <p>Application e-commerce complète développée sous le framework Symfony et conteneurisée avec Docker.</p>
+                <ul class="modal-extras">
+                    <li><i class="material-icons" aria-hidden="true">check_circle</i>Mapping Objet-Relationnel (ORM Doctrine) et persistance des produits</li>
+                    <li><i class="material-icons" aria-hidden="true">check_circle</i>Gestion de panier en session et processus de commande</li>
+                    <li><i class="material-icons" aria-hidden="true">check_circle</i>Système complet d'authentification, de contrôle d'accès et de sécurité</li>
+                    <li><i class="material-icons" aria-hidden="true">check_circle</i>Interface d'administration (CRUD) et validation poussée des formulaires</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="modal10" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal10-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/ecole_loustics.png" alt="" onerror="this.src='assets/image/base_de_donnee.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">Mobile</span><span class="modal-tag">Java Android</span><span class="modal-tag">Room DB</span></div>
+                <h3 id="modal10-title">Application éducative Android — L'École des Loustics</h3>
+                <p>Refactoring complet du code d'une application mobile primaire. Normalisation de la base de données relationnelle via l'ORM Room DB et amélioration de la réactivité utilisateur.</p>
+            </div>
+        </div>
+
+        <div id="modal11" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal11-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/anniv.png" alt="" onerror="this.src='assets/image/fond_bleu.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">Web</span><span class="modal-tag">JavaScript</span><span class="modal-tag">Supabase</span></div>
+                <h3 id="modal11-title">Web App temps réel — Supabase &amp; JS</h3>
+                <p>Application web de gestion d'événements sans framework avec mise à jour du DOM en temps réel via les web-sockets du Backend-as-a-Service Supabase et sécurisation des accès RLS (Row Level Security).</p>
+                <div class="modal-link-wrapper">
+                    <a href="https://areywaterlou.github.io/anniv-app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Voir l'application
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal12" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal12-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/wordpress.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">Terminé</span><span class="modal-tag">WordPress</span><span class="modal-tag">PHP</span></div>
+                <h3 id="modal12-title">Stage — Développement Web (Club sportif)</h3>
+                <p>Conception et refonte d'un site à fort trafic local. Mise en place d'un module d'inscription automatisé réduisant les saisies manuelles et amélioration globale des performances SEO.</p>
+            </div>
+        </div>
+
+        <div id="modal13" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal13-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/wordpress.png" alt="" onerror="this.src='assets/image/ordinateur.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">Terminé</span><span class="modal-tag">WordPress</span><span class="modal-tag">UX</span></div>
+                <h3 id="modal13-title">Mission Client — Mairie de Chatte</h3>
+                <p>Prestation d'optimisation et de restructuration réalisée pour le site institutionnel de la commune. Audit d'arborescence, amélioration de la lisibilité des actualités et mise en conformité des contenus.</p>
+                <div class="modal-link-wrapper">
+                    <a href="https://www.commune-chatte.fr" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Voir le site officiel
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================================================== -->
+        <!-- CONTACT                                                -->
+        <!-- ===================================================== -->
+        <section id="contact" aria-labelledby="title-contact">
+            <h2 class="section-title" id="title-contact">Me contacter</h2>
+            <p class="contact-intro">Disponible pour une alternance dès que possible. N'hésitez pas à me joindre directement par email ou téléphone.</p>
+
+            <div class="contact-container">
+                <div class="contact-info">
+
+                    <a href="assets/docs/CV_Arthur_Reymond.pdf" download="CV_Arthur_Reymond.pdf" class="btn-primary btn-cv" aria-label="Télécharger le CV d'Arthur Reymond">
+                        <i class="material-icons" aria-hidden="true">download</i>
+                        Télécharger mon CV (PDF)
+                    </a>
+
+                    <a href="mailto:arthur.reymond@etu.univ-grenoble-alpes.fr?subject=Opportunité%20alternance%20-%20Arthur%20Reymond" class="contact-item contact-item--link" aria-label="Envoyer un email à Arthur Reymond">
+                        <i class="material-icons" aria-hidden="true">email</i>
+                        <div>
+                            <h3>Email universitaire</h3>
+                            <p>arthur.reymond@etu.univ-grenoble-alpes.fr</p>
+                        </div>
+                    </a>
+
+                    <div class="contact-item">
+                        <i class="material-icons" aria-hidden="true">phone</i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+33782209701">+33 7 82 20 97 01</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="material-icons" aria-hidden="true">place</i>
+                        <div>
+                            <h3>Localisation</h3>
+                            <p>Chatte / Grenoble, Isère (38) · Permis B</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="material-icons" aria-hidden="true">school</i>
+                        <div>
+                            <h3>Formation</h3>
+                            <p>IUT2 de Grenoble – BUT Informatique</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links" aria-label="Réseaux sociaux">
+                        <a href="https://github.com/Areywaterlou" target="_blank" rel="noopener noreferrer" class="social-link" title="Profil GitHub">
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank" rel="noopener noreferrer" class="social-link" title="Profil LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
 
+   <!-- ===================================================== -->
+    <!-- FOOTER                                                 -->
+    <!-- ===================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+
+            <!-- Colonne 1 : Identité & Bio -->
+            <div class="footer-brand">
+                <div class="footer-profile">
+                    <span class="footer-avatar" aria-hidden="true">AR</span>
+                    <p class="footer-name">Arthur <span>Reymond</span></p>
+                </div>
+                <p class="footer-bio">
+                    Étudiant en 2<sup>e</sup> année de BUT Informatique à l'IUT2 de Grenoble. Développeur web &amp; mobile, disponible pour une alternance.
+                </p>
+            </div>
+
+            <!-- Colonne 2 : Navigation rapide -->
+            <nav class="footer-nav" aria-label="Navigation de pied de page">
+                <h3 class="footer-title">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#parcours">Parcours</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Colonne 3 : Contact & Réseaux -->
+            <div class="footer-contact">
+                <h3 class="footer-title">Contact &amp; Réseaux</h3>
+                <ul class="footer-contact-list">
+                    <li>
+                        <a href="mailto:arthur.reymond@etu.univ-grenoble-alpes.fr">
+                            <i class="material-icons" aria-hidden="true">email</i>
+                            <span>arthur.reymond@etu.univ-grenoble-alpes.fr</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:+33782209701">
+                            <i class="material-icons" aria-hidden="true">phone</i>
+                            <span>+33 7 82 20 97 01</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Areywaterlou" target="_blank" rel="noopener noreferrer">
+                            <i class="material-icons" aria-hidden="true">code</i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/arthur-reymond-00988b2a2/" target="_blank" rel="noopener noreferrer">
+                            <i class="material-icons" aria-hidden="true">work</i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Bas de page : Mentions & Retour haut -->
+        <div class="footer-bottom">
+            <p class="footer-copy">© <span id="footer-year">2026</span> Arthur Reymond · IUT2 Grenoble</p>
+            <button type="button" id="backToTop" class="back-to-top" aria-label="Retour en haut de page">
+                <i class="material-icons" aria-hidden="true">keyboard_arrow_up</i>
+            </button>
+        </div>
+    </footer>
+
     <script>
-        // Highlight nav link on scroll
-        const sections = document.querySelectorAll('section[id], header[id]');
+        // ===================================================
+        // FOOTER : année dynamique, copie de l'email, retour en haut
+        // ===================================================
+        document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+        const copyBtn = document.getElementById('copyEmailBtn');
+        copyBtn.addEventListener('click', async () => {
+            const email = 'arthur.reymond@etu.univ-grenoble-alpes.fr';
+            try {
+                await navigator.clipboard.writeText(email);
+            } catch {
+                // Repli si l'API Clipboard est indisponible (contexte non sécurisé, permissions...)
+                const tmp = document.createElement('textarea');
+                tmp.value = email;
+                tmp.style.position = 'fixed';
+                tmp.style.opacity = '0';
+                document.body.appendChild(tmp);
+                tmp.select();
+                document.execCommand('copy');
+                document.body.removeChild(tmp);
+            }
+            const label = copyBtn.querySelector('span');
+            const original = label.textContent;
+            copyBtn.classList.add('copy-email-btn--done');
+            label.textContent = 'Email copié !';
+            setTimeout(() => {
+                copyBtn.classList.remove('copy-email-btn--done');
+                label.textContent = original;
+            }, 2000);
+        });
+
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('is-visible', window.scrollY > 600);
+        });
+        backToTop.addEventListener('click', () => {
+            document.getElementById('accueil').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+    <script>
+        // ===================================================
+        // MODALES PROJETS
+        // ===================================================
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+            requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('modal--open')));
+            modal.querySelector('.close').focus();
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            if (!modal) return;
+            modal.classList.remove('modal--open');
+            modal.addEventListener('transitionend', () => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, { once: true });
+        }
+
+        document.querySelectorAll('[data-modal]').forEach(card => {
+            card.setAttribute('role', 'button');
+            card.addEventListener('click', () => openModal(card.dataset.modal));
+            card.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openModal(card.dataset.modal);
+                }
+            });
+        });
+
+        document.querySelectorAll('[data-close]').forEach(btn => {
+            btn.addEventListener('click', () => closeModal(btn.closest('.modal').id));
+        });
+
+        window.addEventListener('click', e => {
+            if (e.target.classList.contains('modal')) closeModal(e.target.id);
+        });
+
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(m => {
+                    if (m.style.display === 'flex') closeModal(m.id);
+                });
+            }
+        });
+
+        // ===================================================
+        // FILTRES PROJETS (instantané, sans dépendance à transitionend)
+        // ===================================================
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const cards   = document.querySelectorAll('.project-card');
+
+        function applyFilter(filter) {
+            tabBtns.forEach(b => {
+                const active = b.dataset.filter === filter;
+                b.classList.toggle('active', active);
+                b.setAttribute('aria-selected', String(active));
+            });
+
+            let visibleIndex = 0;
+            cards.forEach(card => {
+                const domains = (card.dataset.domain || '').split(' ');
+                const match = filter === 'all' || domains.includes(filter);
+
+                if (match) {
+                    card.hidden = false;
+                    card.style.setProperty('--stagger', `${visibleIndex * 45}ms`);
+                    card.classList.remove('card-pop');
+                    void card.offsetWidth; // force le reflow pour rejouer l'animation
+                    card.classList.add('card-pop');
+                    visibleIndex++;
+                } else {
+                    card.hidden = true;
+                }
+            });
+        }
+
+        tabBtns.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.filter)));
+
+        // ===================================================
+        // CHIPS DE COMPÉTENCE -> FILTRE + SURBRILLANCE PROJETS
+        // ===================================================
+        document.querySelectorAll('.skill-list-complex .item').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const tech = chip.dataset.tech.toLowerCase();
+                applyFilter('all');
+
+                const matches = [];
+                cards.forEach(card => {
+                    const tags = [...card.querySelectorAll('.project-tags span')].map(s => s.textContent.toLowerCase());
+                    const isMatch = tags.some(t => t.includes(tech) || tech.includes(t));
+                    card.classList.toggle('tech-highlight', isMatch);
+                    if (isMatch) matches.push(card);
+                });
+
+                if (matches.length) {
+                    document.getElementById('projets').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    setTimeout(() => matches[0].scrollIntoView({ behavior: 'smooth', block: 'center' }), 350);
+                }
+
+                setTimeout(() => cards.forEach(c => c.classList.remove('tech-highlight')), 2600);
+            });
+        });
+
+        // ===================================================
+        // SCROLL REVEAL (apparition progressive au défilement)
+        // ===================================================
+        const revealObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const delay = parseInt(el.dataset.delay || 0);
+                    setTimeout(() => el.classList.add('revealed'), delay);
+                    revealObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach((el, i) => {
+            if (el.closest('.projects-grid')) el.dataset.delay = (i % 4) * 70;
+            revealObserver.observe(el);
+        });
+
+        // ===================================================
+        // NAVIGATION ACTIVE AU DÉFILEMENT (One-Page)
+        // ===================================================
+        const navSections = document.querySelectorAll('main > section, header#accueil');
         const navLinks = document.querySelectorAll('.nav-links a');
-        const observer = new IntersectionObserver(entries => {
+
+        const navObserver = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     navLinks.forEach(link => link.classList.remove('active'));
@@ -150,8 +923,10 @@
                     if (active) active.classList.add('active');
                 }
             });
-        }, { threshold: 0.5 });
-        sections.forEach(s => observer.observe(s));
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+        navSections.forEach(s => navObserver.observe(s));
     </script>
+
 </body>
 </html>
