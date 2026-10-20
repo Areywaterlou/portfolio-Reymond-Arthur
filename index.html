@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio d'Arthur Reymond – Étudiant en BUT Informatique à Grenoble, développeur web et mobile en recherche d'alternance dès que possible.">
+    <meta name="description" content="Portfolio d'Arthur Reymond – Étudiant en BUT Informatique à Grenoble, développeur web et mobile en recherche de stage dès que possible.">
     <link rel="icon" type="image/png" href="assets/icons/flaviconAR.png">
-    <title>Arthur Reymond – Développeur Web & Mobile · Recherche d'alternance</title>
+    <title>Arthur Reymond – Développeur Web & Mobile · Recherche de stage</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,12 +43,12 @@
                 <!-- 1. PRÉSENTATION-->
                 <span class="status-badge">
                     <span class="status-dot" aria-hidden="true"></span>
-                    Disponible pour alternance dès que possible !
+                    Disponible pour un stage du 22 mars au 25 juin dès que possible !
                 </span>
 
                 <p class="hero-eyebrow">Bonjour, je suis</p>
                 <h1 class="hero-name">Arthur Reymond</h1>
-                <p class="hero-title">Développeur web &amp; mobile · Rythme BUT3</p>
+                <p class="hero-title">Développeur web &amp; mobile · Recherche de stage</p>
 
                 <p class="hero-bio">
                     Étudiant en 2<sup>e</sup> année de BUT Informatique à l'IUT2 de Grenoble. Je conçois des applications web, mobiles et de gestion de données à travers des projets académiques et des missions réelles en entreprise mais aussi quelques projets personnels.
@@ -67,11 +67,11 @@
                     </a>
                     <a href="#contact" class="btn-secondary">
                         <i class="material-icons" aria-hidden="true">mail</i>
-                        Recruter en alternance
+                        Proposer un stage
                     </a>
                 </div>
 
-                <div class="alternance-strip" aria-label="Points clés pour l'alternance">
+                <div class="alternance-strip" aria-label="Points clés pour le stage">
                     <div class="alternance-point">
                         <i class="material-icons" aria-hidden="true">school</i>
                         <h4>BUT2 Informatique</h4>
@@ -84,14 +84,13 @@
                     </div>
                     <div class="alternance-point">
                         <i class="material-icons" aria-hidden="true">event_available</i>
-                        <h4>Alternance</h4>
-                        <p>Rythme BUT3 sur l'année universitaire 2026-2027</p>
+                        <h4>Stage</h4>
+                        <p>Du 22 mars au 25 juin</p>
                     </div>
                 </div>
 
                 <!-- 2. COMPÉTENCES (Fusionnées dans le même bloc) -->
-                <!-- J'ai ajouté une div englobante pour aérer et titrer cette sous-partie -->
-                <div class="hero-skills" style="margin-top: 3rem;" aria-labelledby="title-competences">
+                <div class="hero-skills" id="competences" style="margin-top: 3rem;" aria-labelledby="title-competences">
                     <h2 class="section-title" id="title-competences" style="font-size: 1.5rem; text-align: left; margin-bottom: 1.5rem;">Mes Compétences</h2>
                     
                     <div class="skills-grid-large">
@@ -102,7 +101,9 @@
                                 <div class="skill-list-complex">
                                     <button type="button" class="item" data-tech="java">Java</button>
                                     <button type="button" class="item" data-tech="javascript">JavaScript</button>
+                                    <button type="button" class="item" data-tech="angular">Angular</button>
                                     <button type="button" class="item" data-tech="php">PHP</button>
+                                    <button type="button" class="item" data-tech="python">Python</button>
                                     <button type="button" class="item" data-tech="html">HTML5 / CSS3</button>
                                     <button type="button" class="item" data-tech="c++">C / C++</button>
                                     <button type="button" class="item" data-tech="symfony">Symfony</button>
@@ -418,6 +419,39 @@
                     </div>
                 </article>
 
+                <article class="project-card reveal" data-domain="web wip" data-modal="modal14" tabindex="0">
+                    <div class="project-badge">En cours</div>
+                    <img src="assets/image/duel-heros.png" alt="Duel de héros" onerror="this.src='assets/image/carte_faerun.webp'">
+                    <div class="project-content">
+                        <h3>Duel de héros — Angular</h3>
+                        <p>Application Angular en cours de développement : composants, routing et services.</p>
+                        <div class="project-tags"><span>Angular</span><span>TypeScript</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="applications" data-modal="modal15" tabindex="0">
+                    <div class="project-badge">Game Jam</div>
+                    <img src="assets/image/run-and-burn.png" alt="Run &amp; Burn" onerror="this.src='assets/image/carte_faerun.webp'">
+                    <div class="project-content">
+                        <h3>Run &amp; Burn — Game Jam IUT2</h3>
+                        <p>Jeu développé en équipe en temps limité lors de la Game Jam 2026 de l'IUT2.</p>
+                        <div class="project-tags"><span>Python</span><span>Pygame</span><span>Travail d'équipe</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
+                <article class="project-card reveal" data-domain="applications" data-modal="modal16" tabindex="0">
+                    <div class="project-badge">Perso</div>
+                    <img src="assets/image/librarian-stats.png" alt="Librarian Stats" onerror="this.src='assets/image/base_de_donnee.jpg'">
+                    <div class="project-content">
+                        <h3>Librarian Stats</h3>
+                        <p>Projet personnel autour de statistiques pour un jeu.</p>
+                        <div class="project-tags"><span>Projet perso</span></div>
+                        <span class="view-more">En savoir plus →</span>
+                    </div>
+                </article>
+
                 <article class="project-card reveal" data-domain="web" data-modal="modal12" tabindex="0">
                     <div class="project-badge">Terminé</div>
                     <img src="assets/image/wordpress.png" alt="Stage WordPress" onerror="this.src='assets/image/ordinateur.jpg'">
@@ -483,7 +517,7 @@
                 <img src="assets/image/livre.png.jpeg" alt="">
                 <div class="modal-meta"><span class="modal-badge-sm">Web</span><span class="modal-tag">HTML</span><span class="modal-tag">CSS</span><span class="modal-tag">JS</span></div>
                 <h3 id="modal4-title">Portfolio personnel</h3>
-                <p>Conception et intégration de ce portfolio interactif sans framework JS lourd : filtres dynamiques, modales accessibles et design adapté à la recherche d'alternance.</p>
+                <p>Conception et intégration de ce portfolio interactif sans framework JS lourd : filtres dynamiques, modales accessibles et design adapté à la recherche de stage.</p>
                 <div class="modal-link-wrapper">
                     <a href="#accueil" class="project-link">
                         <i class="material-icons">launch</i>Voir le site
@@ -608,12 +642,52 @@
             </div>
         </div>
 
+        <div id="modal14" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal14-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/duel-heros.png" alt="" onerror="this.src='assets/image/carte_faerun.webp'">
+                <div class="modal-meta"><span class="modal-badge-sm">En cours</span><span class="modal-tag">Angular</span><span class="modal-tag">TypeScript</span></div>
+                <h3 id="modal14-title">Duel de héros — Angular</h3>
+                <p>Projet réalisé au fil de mon apprentissage d'Angular : découpage en composants, navigation par routing et partage de données via des services. Le projet est toujours en cours de développement.</p>
+                <div class="modal-link-wrapper">
+                    <a href="https://github.com/Areywaterlou/Projet-duel-de-heros" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Voir le code sur GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal15" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal15-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/run-and-burn.png" alt="" onerror="this.src='assets/image/carte_faerun.webp'">
+                <div class="modal-meta"><span class="modal-badge-sm">Game Jam</span><span class="modal-tag">Python</span><span class="modal-tag">Pygame</span></div>
+                <h3 id="modal15-title">Run &amp; Burn — Game Jam IUT2 2026</h3>
+                <p>Jeu vidéo en Python/Pygame conçu en équipe pendant la Game Jam 2026 de l'IUT2 de Grenoble : organisation du travail sur un temps imparti, gestion de versions sur GitLab et intégration des assets (graphismes, sons, cartes, dialogues).</p>
+                <div class="modal-link-wrapper">
+                    <a href="https://gricad-gitlab.univ-grenoble-alpes.fr/gamejam2026_gr3/rbdeveloppement" target="_blank" rel="noopener noreferrer" class="project-link">
+                        <i class="material-icons">launch</i>Voir le dépôt GitLab
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal16" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal16-title">
+            <div class="modal-content">
+                <button class="close" data-close aria-label="Fermer">&times;</button>
+                <img src="assets/image/librarian-stats.png" alt="" onerror="this.src='assets/image/base_de_donnee.jpg'">
+                <div class="modal-meta"><span class="modal-badge-sm">Perso</span><span class="modal-tag">Projet perso</span></div>
+                <h3 id="modal16-title">Librarian Stats</h3>
+                <p>Projet personnel autour de statistiques pour un jeu, développé sur mon temps libre.</p>
+            </div>
+        </div>
+
         <!-- ===================================================== -->
         <!-- CONTACT                                                -->
         <!-- ===================================================== -->
         <section id="contact" aria-labelledby="title-contact">
             <h2 class="section-title" id="title-contact">Me contacter</h2>
-            <p class="contact-intro">Disponible pour une alternance dès que possible. N'hésitez pas à me joindre directement par email ou téléphone.</p>
+            <p class="contact-intro">Disponible pour un stage dès que possible. N'hésitez pas à me joindre directement par email ou téléphone.</p>
 
             <div class="contact-container">
                 <div class="contact-info">
@@ -623,7 +697,7 @@
                         Télécharger mon CV (PDF)
                     </a>
 
-                    <a href="mailto:arthur.reymond@etu.univ-grenoble-alpes.fr?subject=Opportunité%20alternance%20-%20Arthur%20Reymond" class="contact-item contact-item--link" aria-label="Envoyer un email à Arthur Reymond">
+                    <a href="mailto:arthur.reymond@etu.univ-grenoble-alpes.fr?subject=Opportunité%20stage%20-%20Arthur%20Reymond" class="contact-item contact-item--link" aria-label="Envoyer un email à Arthur Reymond">
                         <i class="material-icons" aria-hidden="true">email</i>
                         <div>
                             <h3>Email universitaire</h3>
@@ -670,7 +744,7 @@
 
     </main>
 
-   <!-- ===================================================== -->
+    <!-- ===================================================== -->
     <!-- FOOTER                                                 -->
     <!-- ===================================================== -->
     <footer class="site-footer">
@@ -683,7 +757,7 @@
                     <p class="footer-name">Arthur <span>Reymond</span></p>
                 </div>
                 <p class="footer-bio">
-                    Étudiant en 2<sup>e</sup> année de BUT Informatique à l'IUT2 de Grenoble. Développeur web &amp; mobile, disponible pour une alternance.
+                    Étudiant en 2<sup>e</sup> année de BUT Informatique à l'IUT2 de Grenoble. Développeur web &amp; mobile, disponible pour un stage.
                 </p>
             </div>
 
@@ -743,35 +817,9 @@
 
     <script>
         // ===================================================
-        // FOOTER : année dynamique, copie de l'email, retour en haut
+        // FOOTER : année dynamique, retour en haut
         // ===================================================
         document.getElementById('footer-year').textContent = new Date().getFullYear();
-
-        const copyBtn = document.getElementById('copyEmailBtn');
-        copyBtn.addEventListener('click', async () => {
-            const email = 'arthur.reymond@etu.univ-grenoble-alpes.fr';
-            try {
-                await navigator.clipboard.writeText(email);
-            } catch {
-                // Repli si l'API Clipboard est indisponible (contexte non sécurisé, permissions...)
-                const tmp = document.createElement('textarea');
-                tmp.value = email;
-                tmp.style.position = 'fixed';
-                tmp.style.opacity = '0';
-                document.body.appendChild(tmp);
-                tmp.select();
-                document.execCommand('copy');
-                document.body.removeChild(tmp);
-            }
-            const label = copyBtn.querySelector('span');
-            const original = label.textContent;
-            copyBtn.classList.add('copy-email-btn--done');
-            label.textContent = 'Email copié !';
-            setTimeout(() => {
-                copyBtn.classList.remove('copy-email-btn--done');
-                label.textContent = original;
-            }, 2000);
-        });
 
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
